@@ -1,0 +1,41 @@
+[  2.00159268e+01   6.80038357e+00   5.78518674e+00   5.08322799e+00
+   4.95587216e+00   4.21826682e+00   4.03417893e+00   3.91158044e+00
+   3.67139048e+00   3.61835286e+00   3.46820787e+00   3.34972129e+00
+   3.10412953e+00   2.93202023e+00   2.81058505e+00   2.69479492e+00
+   2.52073747e+00   2.30338158e+00   2.24581641e+00   2.20876091e+00
+   2.10472239e+00   2.06118862e+00   1.87855294e+00   1.74734516e+00
+   1.66816642e+00   1.56380031e+00   1.51043430e+00   1.47938253e+00
+   1.29716197e+00   1.18345480e+00   1.11688622e+00   1.04963157e+00
+   9.89106904e-01   9.07482369e-01   8.73893394e-01   7.68187937e-01
+   7.24594814e-01   6.44210856e-01   6.05634205e-01   5.80699052e-01
+   5.49307587e-01   4.45036592e-01   3.85752356e-01   3.27786307e-01
+   3.03433372e-01   2.12263790e-01   8.88885714e-15   1.59559560e-15
+   1.59559560e-15   1.59559560e-15   1.59559560e-15   1.59559560e-15
+   1.59559560e-15   1.59559560e-15   1.59559560e-15   1.59559560e-15
+   1.59559560e-15   1.59559560e-15   1.59559560e-15   1.59559560e-15
+   1.59559560e-15   1.59559560e-15   1.59559560e-15   1.59559560e-15
+   1.59559560e-15   1.59559560e-15   1.59559560e-15   1.59559560e-15
+   1.59559560e-15]
+721.0
+l= 21 total dimensions= 69
+0 ['com.axis.mobile.apk.xml', 'com.ingvysyabank.mbank.retail.android.apk.xml', 'com.olx.olx.apk.xml', 'com.htsu.hsbcpersonalbanking.apk.xml', 'com.ss.tarangsw.ccd.apk.xml']
+1 ['com.shopclues.apk.xml', 'in.goindigo.android.apk.xml', 'iglobe.project.pharmatab.apk.xml', 'com.hungama.imh.apk.xml', 'com.toi.reader.activities.apk.xml', 'com.yebhi.apk.xml', 'in.exotel.mobile.apk.xml']
+2 ['haygot.togyah.app.apk.xml', 'com.kaltura.kms.apk.xml', 'com.bt.inx.apk.xml', 'com.sbi.SBIFreedomPlus.apk.xml', 'com.fss.indus.apk.xml', 'com.fss.obc.apk.xml', 'com.atomyes.apk.xml', 'com.paymate.syndicatebank.apk.xml', 'com.csam.icici.bank.imobile.apk.xml', 'com.spanco.canMobile.apk.xml']
+3 ['com.skype.raider.apk.xml']
+4 ['com.done.faasos.apk.xml', 'com.quora.android.apk.xml', 'com.flutterbee.tinyowl.apk.xml', 'com.poncho.apk.xml', 'com.druva.inSync_android.apk.xml']
+5 ['com.facebook.katana.apk.xml']
+6 ['com.quickheal.platform.apk.xml']
+7 ['com.mobikwik_new.apk.xml', 'com.olacabs.customer.apk.xml', 'com.msf.kbank.mobile.apk.xml', 'in.moodi.org.mi2013.apk.xml']
+8 ['com.makemytrip.apk.xml', 'in.redbus.android.apk.xml', 'com.tradus.apk.xml', 'com.net.pvr.apk.xml', 'com.bt.bms.apk.xml']
+9 ['com.org.iimjobs.apk.xml', 'com.freecharge.android.apk.xml', 'com.shaadi.android.apk.xml', 'com.sensibol.gaonamobile.karaoke.apk.xml', 'com.seclore.filesecure.android.lite.apk.xml', 'cinepolis.ticketnew.android.ui.apk.xml', 'com.mventus.selfcare.activity.apk.xml', 'milaap.blog.apk.xml']
+10 ['com.google.android.apps.plus.apk.xml']
+11 ['com.application.zomato.apk.xml', 'com.aranoah.healthkart.plus.apk.xml']
+12 ['com.truecaller.apk.xml']
+13 ['com.Splitwise.SplitwiseMobile.apk.xml', 'net.one97.paytm.apk.xml', 'com.yatra.base.apk.xml', 'com.shaukk.http.apk.xml', 'com.quikr.apk.xml', 'com.snapdeal.main.apk.xml']
+14 ['com.snapwork.hdfc.apk.xml', 'com.locon.housing.apk.xml', 'com.federalbank.apk.xml', 'com.iob_phone.apk.xml', 'com.infosys.android.ui.apk.xml']
+15 ['com.whatsapp.apk.xml']
+16 ['com.infoz.techfest.apk.xml']
+17 ['com.myairtelapp.apk.xml', 'com.justdial.search.apk.xml']
+18 ['com.instagram.android.apk.xml']
+19 ['com.flipkart.android.apk.xml']
+20 ['com.wi.nextgencatalogs.apk.xml']

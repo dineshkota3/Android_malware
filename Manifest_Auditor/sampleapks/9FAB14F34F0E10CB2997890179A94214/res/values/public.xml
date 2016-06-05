@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="drawable" name="icon" id="0x7f020000" />
+    <public type="layout" name="main" id="0x7f030000" />
+    <public type="layout" name="mainmenu" id="0x7f030001" />
+    <public type="raw" name="bdata" id="0x7f040000" />
+    <public type="raw" name="data" id="0x7f040001" />
+    <public type="raw" name="wdata" id="0x7f040002" />
+    <public type="string" name="app_name" id="0x7f050000" />
+    <public type="id" name="webView1" id="0x7f060000" />
+    <public type="id" name="menu" id="0x7f060001" />
+    <public type="id" name="menurules" id="0x7f060002" />
+</resources>

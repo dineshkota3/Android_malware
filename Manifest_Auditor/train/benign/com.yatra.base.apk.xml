@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="27" android:versionName="3.0.3" package="com.yatra.base"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature android:glEsVersion="0x20000" android:required="true" />
+    <compatible-screens>
+        <screen android:screenSize="small" android:screenDensity="ldpi" />
+        <screen android:screenSize="small" android:screenDensity="mdpi" />
+        <screen android:screenSize="small" android:screenDensity="hdpi" />
+        <screen android:screenSize="small" android:screenDensity="xhdpi" />
+        <screen android:screenSize="normal" android:screenDensity="ldpi" />
+        <screen android:screenSize="normal" android:screenDensity="mdpi" />
+        <screen android:screenSize="normal" android:screenDensity="hdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+        <screen android:screenSize="normal" android:screenDensity="480" />
+        <screen android:screenSize="large" android:screenDensity="ldpi" />
+        <screen android:screenSize="large" android:screenDensity="mdpi" />
+        <screen android:screenSize="large" android:screenDensity="hdpi" />
+        <screen android:screenSize="large" android:screenDensity="xhdpi" />
+        <screen android:screenSize="large" android:screenDensity="213" />
+        <screen android:screenSize="xlarge" android:screenDensity="ldpi" />
+        <screen android:screenSize="xlarge" android:screenDensity="mdpi" />
+        <screen android:screenSize="xlarge" android:screenDensity="hdpi" />
+        <screen android:screenSize="xlarge" android:screenDensity="xhdpi" />
+    </compatible-screens>
+    <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.yatra.base.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:name="com.yatra.base.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.yatra.base.permission.C2D_MESSAGE" />
+    <application android:theme="@style/AppBaseTheme" android:label="@string/app_name" android:icon="@drawable/icn_app" android:name="com.yatra.base.activity.YatraApplication" android:debuggable="false" android:allowBackup="false" android:installLocation="auto" android:hardwareAccelerated="true">
+        <uses-library android:name="com.google.android.maps" />
+        <activity android:label="ticketConfirmation" android:name="com.yatra.flights.activity.TicketConfirmedActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppBaseTheme" android:label="ticketConfirmation" android:name="com.yatra.hotels.activity.TicketConfirmedActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppSplashTheme" android:label="@string/app_name" android:name="com.yatra.base.activity.SplashScreenActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowNoTitle="true" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppSplashTheme" android:name="com.yatra.base.activity.HomeActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.flights.activity.FlightResultFetcherActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:noHistory="true" />
+        <activity android:theme="@style/PaxTheme.Light" android:name="com.yatra.flights.activity.FlightBookingActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/PaxTheme.Light" android:name="com.yatra.hotels.activity.HotelBookingActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.flights.activity.LocationSearchActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:name="com.yatra.flights.activity.CalendarPickerActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.flights.activity.FlightSearchResultsActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.flights.activity.FlightGroupResultsActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.flights.activity.PaymentOptionsActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.flights.activity.CardDetailsEntryActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.flights.activity.FlightReviewActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.flights.activity.TnCActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:name="com.yatra.toolkit.activity.WebPaymentActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppBaseTheme" android:label="@string/passenger_list" android:name="com.yatra.flights.activity.PassengerActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.flights.activity.NetBankingActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:label="storedCards" android:name="com.yatra.flights.activity.StoredCardEntryActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:label="underConstruction" android:name="com.yatra.base.activity.UnderConstructionActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:label="Yatra" android:name="com.yatra.base.activity.ViewFlightTicketActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="yatra.com" android:pathPrefix="/getETicket" />
+            </intent-filter>
+        </activity>
+        <activity android:label="Yatra" android:name="com.yatra.base.activity.ViewHotelTicketActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="yatra.com" android:pathPrefix="/getEHotelTicket" />
+            </intent-filter>
+        </activity>
+        <activity android:label="calendarPicker" android:name="com.yatra.hotels.activity.CalendarPickerActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppBaseTheme" android:label="hotelResults" android:name="com.yatra.hotels.activity.HotelResultFetcherActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:noHistory="true" />
+        <activity android:theme="@style/AppBaseTheme" android:label="hotelSRP" android:name="com.yatra.hotels.activity.HotelSearchResultsActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:label="hotelAmenities" android:name="com.yatra.hotels.activity.HotelAmenitiesActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:name="com.yatra.hotels.activity.LocationSearchActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.flights.activity.InternationalFlightSearchResultsActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.hotels.activity.HotelReviewActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.yatra.hotels.activity.HotelMapActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:name="com.yatra.hotels.activity.HotelShortListActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.yatra.hotels.activity.SelectShortListActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.hotels.activity.HotelImageSwitcherActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:name="com.yatra.base.activity.TestActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.hotels.activity.PaymentOptionsActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:label="@string/passenger_list" android:name="com.yatra.hotels.activity.PassengerActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.hotels.activity.CardDetailsEntryActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:name="com.yatra.hotels.activity.NetBankingActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppBaseTheme" android:label="storedCards" android:name="com.yatra.hotels.activity.StoredCardEntryActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="shortlist" android:name="com.yatra.hotels.activity.AddShortListActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.yatra.flights.activity.FlightStatsActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:name="com.yatra.hotels.activity.HotelCustomerReviewActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:name="com.yatra.base.activity.PushNotificationsDialogActivity" android:taskAffinity="com.yatra.pushNotifications" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <activity android:name="com.yatra.base.activity.BringToFrontActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" />
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyB7v1whcskvmxFESSbXnABBDwU4gdLIUbA" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+        <receiver android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.yatra.base.receivers.PushNotificationsBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.yatra.base" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.yatra.base.services.PushNotificationsIntentService" />
+        <activity android:name="com.cognitiveclouds.socialite.activity.SocialSliderActivity" />
+    </application>
+    <permission android:name="com.yatra.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+</manifest>

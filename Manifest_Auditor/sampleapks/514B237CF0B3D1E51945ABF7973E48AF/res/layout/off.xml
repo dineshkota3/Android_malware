@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/lighter_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="outsideInset" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="100.0" android:isScrollContainer="true" android:fadeScrollbars="false">
+        <TextView android:textSize="32.0px" android:textColor="@color/black" android:id="@id/off_text" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/full_off_text" />
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/back_button_off" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/back_off" android:layout_weight="2.0" />
+        <Button android:id="@id/yes_button_off" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/i_accept_off" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

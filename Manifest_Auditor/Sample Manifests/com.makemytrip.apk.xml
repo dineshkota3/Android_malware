@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="23" android:versionName="3.0.0" android:installLocation="auto" package="com.makemytrip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <permission android:name="com.makemytrip.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.makemytrip.permission.C2D_MESSAGE" />
+    <application android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:icon="@drawable/app_icon" android:name="com.mmt.application.MMTApplication">
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.mmt.ui.activity.SplashActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.makemytrip.HotelPreferredLocationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.HomeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.mmt.ui.activity.LoginDialogActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateVisible" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.mmt.ui.activity.HotelsLoginActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FlightBookActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.HotelSearchResultsActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FlightSearchResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.ManageTripsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mmt.ui.activity.RefundStatusActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FlightStatusActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.mmt.ui.activity.GetETicketActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.PlacesToEatFullScreenImageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FlightPaymentConfirmationActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.widget.CalendarView" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.LocationPickerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/tabTheme" android:name="com.mmt.ui.activity.FlightFilteringActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.TimeTab" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.PriceTab" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.AirlineTab" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FareTypeTab" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.PassengerDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FlightReviewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.mmt.ui.activity.WebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.EditPassengerHistoryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.SelectPassengersActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.BookingListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.BookingDetailsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.CancellationOptionsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.CompleteCancelConfirmActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.CancelPaxWiseActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.ConfirmPaxWiseCancelActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.CancelSectorWiseActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.ConfirmSectorWiseCancelActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.CabCancelActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.PassengerDialogActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FlightStatusCheckResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.AirlinePickerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.PlacesToEatActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.RestaurantCityPickerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.RestaurantListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.RestaurantDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.PlaceToEatFilter" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.PaymentWebView" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.BookingContactDetail" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.RemoteModuleWebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FeedbackOptionsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FeedbackActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.WelcomeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.BusBookActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.HotelBookActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.RoomConfigureActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.HotelLocationPickerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.ChildAgeSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.NewRoomConfigurationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.BusLocationPickerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.LoginMmtActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.LoginMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.LoginMMTNewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.RegistrationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.WelcomeNewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.ForgotPasswordActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.ReadTermsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.ResetLinkActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.IntlFlightWebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FlightCitySearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateVisible" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.mmt.ui.activity.BookLaterDialogActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.facebook.LoginActivity" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+        <receiver android:name="com.urbanairship.CoreReceiver" />
+        <receiver android:name="com.urbanairship.push.GCMPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.makemytrip" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <service android:label="Push Notification Service" android:name="com.urbanairship.push.PushService" />
+        <service android:label="Event Service" android:name="com.urbanairship.analytics.EventService" />
+        <provider android:name="com.urbanairship.UrbanAirshipProvider" android:exported="false" android:multiprocess="true" android:authorities="com.makemytrip.urbanairship.provider" />
+        <receiver android:name="com.mmt.IntentReceiver" />
+        <receiver android:name="com.mmt.ReferrerReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+            <meta-data android:name="com.seventynine.referrer.receiver" android:value="com.seventynine.MyReceiver" />
+        </receiver>
+        <receiver android:name="com.mmt.MMTBootReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.mmt.service.CreateUserWsService" />
+        <service android:name="com.mmt.service.MMTCheckService" />
+        <activity android:label="@string/title_activity_flight_search_result_activity_intl" android:name="com.makemytrip.FlightSearchResultActivityIntl" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_flight_search_options_intl" android:name="com.makemytrip.FlightSearchOptionsIntl" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.makemytrip.HotelDetailsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyApnfE06B7atgA23g0ROxORoAJuk90DGC8" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.makemytrip.FlightReviewActivityIntl" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.makemytrip.SelectPassengersActivityIntl" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.makemytrip.PassengerDialogActivityIntl" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.makemytrip.PassengerDetailActivityIntl" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.makemytrip.BookLaterDialogActivityIntl" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/title_activity_payment_web_view_intl" android:name="com.makemytrip.PaymentWebViewIntl" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_hotel_room_details" android:name="com.makemytrip.HotelRoomDetailsActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.makemytrip.HotelReviewScreenActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.makemytrip.HotelReviewsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.makemytrip.HotelPaymentsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_hotel_similar_rooms" android:name="com.makemytrip.HotelSimilarRoomsActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.makemytrip.FlightSummaryCallActivityIntl" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.FlightSummaryCallActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="6e126f9d3310c68c4df31339166514e0ba21b538" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.makemytrip.HotelBookLaterDialogActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.mmt.ui.activity.NotificationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.mmt.ui.activity.NotificationWebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.makemytrip.FlightSearchHistoryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mmt.ui.activity.LastViewedHotelsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_hotel_same_type_rooms" android:name="com.makemytrip.HotelSameTypeRoomsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/title_activity_hotel_book_new" android:name="com.makemytrip.HotelBookNewActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+    </application>
+    <uses-feature android:glEsVersion="0x20000" android:required="true" />
+    <permission android:name="com.divum.gmapexample.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.divum.gmapexample.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.makemytrip.permission.C2D_MESSAGE" />
+</manifest>

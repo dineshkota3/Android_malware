@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rlChannel" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivImage" android:layout_width="62.0dip" android:layout_height="62.0dip" android:src="@drawable/iconnews" android:scaleType="fitXY" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/llTitle" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Medium Text" android:singleLine="true" style="@style/NotificationTitle" />
+        <TextView android:textSize="12.0dip" android:id="@id/tvDesc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Small Text" android:scrollHorizontally="false" android:singleLine="false" android:marqueeRepeatLimit="marquee_forever" style="@style/NotificationText" />
+    </LinearLayout>
+</LinearLayout>

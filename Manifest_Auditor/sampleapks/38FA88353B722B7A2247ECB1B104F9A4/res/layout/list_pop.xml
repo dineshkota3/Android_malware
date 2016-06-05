@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#00ffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textColor="#ffffffff" android:id="@id/nextBtn" android:background="@drawable/buttonselector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="下一页" android:layout_alignParentRight="true" />
+    <TextView android:gravity="center" android:id="@id/editText01" android:layout_width="40.0dip" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_toLeftOf="@id/nextBtn" android:layout_alignTop="@id/nextBtn" />
+    <Button android:textColor="#ffffffff" android:id="@id/previousBtn" android:background="@drawable/buttonselector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="上一页" android:layout_toLeftOf="@id/editText01" android:layout_alignTop="@id/nextBtn" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Dialog">
+        <item>最小</item>
+        <item>小</item>
+        <item>中</item>
+        <item>大</item>
+        <item>最大</item>
+    </string-array>
+    <string-array name="auto">
+        <item>慢</item>
+        <item>中</item>
+        <item>快</item>
+    </string-array>
+    <string-array name="shape">
+        <item>我看到一个不错东东%1$s，跟你分享下！</item>
+        <item>美女，偶在玩手机的时候，看到一款超火爆的软件%1$s，你赶紧甩起来！嘻嘻，记得感谢偶吆！</item>
+        <item>帅哥，偶在玩手机的时候，看到一款超火爆的软件%1$s，你赶紧甩起来！嘻嘻，记得感谢偶吆！</item>
+    </string-array>
+</resources>

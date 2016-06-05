@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="21" android:versionName="@string/application_version_name" package="com.quickheal.platform"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.HARDWARE_TEST" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <permission android:name="com.quickheal.platform.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.quickheal.platform.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.sec.android.provider.logsprovider.permission.READ_LOGS" />
+    <uses-permission android:name="com.sec.android.provider.logsprovider.permission.WRITE_LOGS" />
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
+    <uses-feature android:name="android.hardware.location" android:required="false" />
+    <uses-feature android:name="android.hardware.location.network" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <application android:theme="@style/QhTheme" android:label="@string/app_name" android:icon="@drawable/ic_launcher_quickheal" android:name="com.quickheal.platform.Main" android:manageSpaceActivity="com.quickheal.platform.components.activities.ScrManageSpace" android:allowClearUserData="false" android:hardwareAccelerated="true" android:largeHeap="true">
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrRegistrationType" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrInternetActivation" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrInternetFreeTrialActivation" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrSmsActivation" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrSmsFreeTrialActivation" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.tablet.activities.ScrPlayStoreActivationCheck" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrPlayStoreActivation" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.tablet.activities.ScrPlayStoreRenewalCheck" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrPlayStoreRenewal" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrTabletBackgroundExtensionComplete" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrPromoteApplication" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.tablet.activities.ScrRateApplication" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrPlaceHolder" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrScanning" android:configChanges="orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.TabletMenuActivity" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrBrowser" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrRejectedCall" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/QhTheme.ActivityDialog" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrThreatAlert" android:taskAffinity="com.quickheal.platform.threatAlert" android:excludeFromRecents="true" android:launchMode="singleInstance" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/QhTheme.ActivityDialog" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrAdjustor" android:taskAffinity="com.quickheal.platform.performance" android:excludeFromRecents="true" android:configChanges="orientation|screenSize" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.TabletActivity" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrAntivirusSettings" android:windowSoftInputMode="adjustNothing" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrHelp" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrPerformanceSettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrWebSecuritySettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrBackupSettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrNetworkMonitorSettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrGeneralSettings" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrRefreshScreen" android:taskAffinity="com.quickheal.platform.performancemonitor" android:excludeFromRecents="true" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.tablet.activities.ScrTabletDialogHelper" android:taskAffinity="com.quickheal.platform.ScrDialogHelper" android:excludeFromRecents="true" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrAgreement" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.tablet.activities.ScrRenewNow" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.tablet.activities.ScrRenewalPurchaseInformation" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.tablet.activities.ScrRenewalUsingInternet" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.tablet.activities.ScrRenewalUsingSms" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrFwSettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrFirewallMaliciousAppList" />
+        <receiver android:name="com.quickheal.platform.components.receivers.BatteryStatusReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.WidgetBroadcastReceiver" />
+        <receiver android:name="com.quickheal.platform.components.receivers.PushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.quickheal.platform" />
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/QhTheme.NoDisplay" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.DashboardLauncher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.Mobsec" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.Tabsec" android:screenOrientation="unspecified" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.activities.ScrManageSpace" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAgreement" android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.activities.CustomSchemeUriActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="qhmobsec" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtRemoteWipeSettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtSettings" />
+        <activity android:label="@string/lbl_trusted_sims" android:name="com.quickheal.platform.components.activities.ScrAtTrustedSims" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/lbl_trusted_sims" android:name="com.quickheal.platform.components.activities.ScrAtRemoveTrustedSims" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/title_edit_trusted_sim" android:name="com.quickheal.platform.components.activities.ScrAtEditTrustedSim" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtSimChgNotification" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtValidateSecretCode" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrAtSetupSettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrAntitheftSettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrReports" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrTools" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtVitalInfo" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtVitalInfo1" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtVitalInfo2" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrPhoneDialogHelper" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtVitalInfo3" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtHome" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtRemoteWipeFoldersDelete" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtSecurityQuestions" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtSecurityQuestionsDialog" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrBuyNewLicenseDialog" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtSecurityAnswers" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtRecoveryCode" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtInvalidAnswers" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtRemoteWipeDialogActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtFullScreenBlock" android:taskAffinity="com.quickheal.platform.antitheft" android:excludeFromRecents="true" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAtReportsList" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAntitheftDetailedReport" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.DlgRingAlert" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:name="com.quickheal.platform.utils.DeviceAdminHelperActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAsHome" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAsSettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAsBlockedSms" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrWhiteListSettings" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrRemoveFromWhiteList" />
+        <activity android:name="com.quickheal.platform.components.activities.BlockedSMSTab" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.DeleteBlockedSmsTab" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.DlgShowSmsList" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrCbBlockedCall" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrCbHome" />
+        <activity android:name="com.quickheal.platform.components.activities.BlockedCallsTab" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.DeleteBlockedCallsTab" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrBlackList" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrRemoveFromBlackList" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrBlockKeywordList" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrRemoveFromBlockKeywordList" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrWSOtherBrowserSelectedDialg" android:finishOnTaskLaunch="true" android:clearTaskOnLaunch="true" android:excludeFromRecents="true" android:noHistory="true" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrWebsecuritySettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrExcludedWebsites" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrRestrictedWebsites" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrRemoveFromExcludedWebsites" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrWebSecurityDetailedReport" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrWsReportsList" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrRemoveFromRestrictedWebsites" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrRestrictedSitesCatList" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.activities.UrlBlocker" android:enabled="false" android:taskAffinity="com.quickheal.platform.websecurity" android:stateNotNeeded="true" android:excludeFromRecents="true" android:allowTaskReparenting="false" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrWebSecuritySetup" android:noHistory="true" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrSmsSettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.ScrCallBlockSettings" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrAppsControl" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrReports" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrTools" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrHelpHome" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrSettings" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrSMSInterceptor" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrSMSSpamProtection" />
+        <activity android:theme="@style/QhTheme.Translucent" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrEnableBackup" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrBackup" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrBackupData" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrLastBackup" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrBackupRestore" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/title_bkup_reports" android:name="com.quickheal.platform.components.activities.ScrBackupReportsList" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/title_bkup_report" android:name="com.quickheal.platform.components.activities.ScrBackupDetailedReport" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ServiceTabBar" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.tablet.activities.MsgrTestAppActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.activities.DummyLauncherActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.tablet.activities.TabletDummyActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.activities.DummyExpireActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.activities.ScrUninstaller" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/DialogManagerTheme" android:name="com.quickheal.platform.components.activities.DialogManager" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/DialogManagerTheme2" android:name="com.quickheal.platform.components.activities.DialogManager2" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.NoDisplay" android:name="com.quickheal.platform.components.tablet.activities.WidgetUpdateVirusDatabaseActivity" android:taskAffinity="com.quickheal.platform.widgetupdate" android:excludeFromRecents="true" android:configChanges="orientation|screenSize|fontScale" />
+        <activity android:label="@string/lbl_secure_delete_title" android:name="com.quickheal.platform.components.activities.ScrRemovePersonalDataMainScreen" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrQntMainScreen" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrQntRestore" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrQntRemove" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrGeneralSettings" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrGSPassword" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrGSReport" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrGSInternetSettings" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrGSValidateSecretCode" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrScanSettingsMainList" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrScanSettingsInternal" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrScan" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrScanning" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrThreatList" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrScanReportList" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrDetailedScanReport" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrVirusProtectionReportList" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.Dialog" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrThreatAlert" android:taskAffinity="com.quickheal.platform.threatAlert" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrVirusProtectionReport" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrHelp" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrLocateDealer" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrActivationHome" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrActivation1" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrActivation2" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrInternetActivation" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrSmsActivation" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrInternetFreeTrialActivation" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrSmsFreeTrialActivation" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrRenewalUsingInternet" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrRenewalUsingSms" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrRenewal1" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrRenewal2" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrDeactivation1" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrDeactivation" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrDeactivation2" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrTrialToRegistered" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrBackgroundExtensionComplete" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrRegistrationResultDetails" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrPromoteApplication" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrRateApplication" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrRenewNow" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrBuyRenewal" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrRenewOnline" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrCallUs" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrPlayStoreActivationCheck" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.Translucent.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrPlayStoreRenewalCheck" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:theme="@style/QhTheme.NoActionBar" android:name="com.quickheal.platform.components.activities.ScrPlayStoreRenewal" android:windowSoftInputMode="stateUnchanged" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrSupportHome" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrSupportVisitFaq" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrWebSupport" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrLiveChatSupport" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrSupportContactUs" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrQhStore" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAntiTheftSupport" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrBuyNewLicense" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrAboutHome" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrUpdate" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrUpdateReportList" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrUpdateReport" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.DlgPushNotification" android:taskAffinity="com.quickheal.platform.push_notification" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.DlgPushError" android:taskAffinity="com.quickheal.platform.threatAlert" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.DlgPushErrorDetails" android:taskAffinity="com.quickheal.platform.DlgPushErrorDetails" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.DlgPushUsageEnabled" android:taskAffinity="com.quickheal.platform.DlgPushUsageEnabled" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfMainList" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfSummary" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfPerformanceUsage" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfApplicationUsage" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfSummaryAddSafeApp" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfKillRunningApp" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfSafeList" />
+        <activity android:name="com.quickheal.platform.components.activities.PerformanceListItem" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfAddSafeApp" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfRemoveSafeApp" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfPowerSaving" />
+        <activity android:theme="@style/QhTheme.ActivityDialog" android:name="com.quickheal.platform.components.activities.ScrShowPerformanceDialog" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfSpeedupDevice" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrPfReports" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.components.activities.PerformanceMonitorListBaseClass" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.quickheal.platform.dialogs.DlgPerformanceProgress" />
+        <service android:name="com.quickheal.platform.components.services.MobsecService" />
+        <service android:name="com.quickheal.platform.utils.KillAppService" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrFWSettings" android:configChanges="keyboard|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrFirewallAppList" android:configChanges="keyboard|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrFWMaliciousAppList" android:taskAffinity="com.quickheal.platform.firewall" android:excludeFromRecents="true" android:configChanges="keyboard|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrFirewallReportsList" android:configChanges="keyboard|orientation|screenSize|fontScale" />
+        <activity android:label="@string/app_name" android:name="com.quickheal.platform.components.activities.ScrFirewallDetailedReport" android:configChanges="keyboard|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrNMHome" android:configChanges="keyboard|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrNmNetwork" android:configChanges="keyboard|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.ScrNMSummary" android:configChanges="keyboard|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.TabNmSummaryNetworks" android:configChanges="keyboard|orientation|screenSize|fontScale" />
+        <activity android:name="com.quickheal.platform.components.activities.TabNmSummaryAppList" android:configChanges="keyboard|orientation|screenSize|fontScale" />
+        <service android:name="com.quickheal.platform.components.services.MobsecService" />
+        <service android:name="com.quickheal.platform.utils.KillAppService" />
+        <receiver android:name="com.quickheal.platform.components.receivers.InSmsMonitor" android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.AirplaneModeDetector">
+            <intent-filter>
+                <action android:name="android.intent.action.SERVICE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:label="Quick Heal" android:name="com.quickheal.platform.components.receivers.QHWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="MY_OWN_WIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_word" />
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.OnBootServiceLauncher">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.QhCallMonitor">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.PHONE_STATE_EXT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.QhTimerReceiver" />
+        <receiver android:name="com.quickheal.platform.components.receivers.TimeEventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.ExternalMediaReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_CHECKING" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL" />
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.ApplicationReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_CHANGED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.SystemTimeChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.ConnectivityBroadcastReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.ShutDownReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.QUICKBOOT_POWEROFF" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.SmsSentReceiver" />
+        <receiver android:name="com.quickheal.platform.components.receivers.SmsDeliveredReceiver" />
+        <receiver android:name="com.quickheal.platform.components.receivers.QhStatusDeleteIntentReceiver" />
+        <receiver android:name="com.quickheal.platform.components.receivers.UpdateTimerReceiver" />
+        <receiver android:name="com.quickheal.platform.components.receivers.AutoBackupTimerReceiver" />
+        <receiver android:name="com.quickheal.platform.components.receivers.MainDeviceAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN" android:enabled="true">
+            <meta-data android:name="android.app.device_admin" android:resource="@xml/device_admin" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quickheal.platform.components.receivers.NetworkMonitorAlarmReceiver" />
+        <receiver android:name="com.quickheal.platform.components.receivers.PerformanceMonitorAlarmReceiver" />
+        <receiver android:name="com.quickheal.platform.components.receivers.ContinuousTraceAlarmReceiver" />
+        <receiver android:name="com.quickheal.platform.components.receivers.WifiAPStateBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_AP_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

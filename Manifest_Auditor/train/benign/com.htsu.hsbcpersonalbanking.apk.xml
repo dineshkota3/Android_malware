@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="18" android:versionName="@string/app_version" android:installLocation="internalOnly" package="com.htsu.hsbcpersonalbanking"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <permission android:name="com.hsbc.permission.NFC_SE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.hsbc.permission.NFC_SE" />
+    <application android:theme="@style/commonTheme" android:label="@string/app_name" android:icon="@drawable/icon" android:name="com.htsu.hsbcpersonalbanking.application.HSBCMain" android:debuggable="@bool/debug_mode" android:configChanges="locale">
+        <receiver android:name="com.htsu.hsbcpersonalbanking.BroadcastReceiver" android:exported="false" />
+        <uses-library android:name="com.google.android.maps" android:required="false" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.HybridWebActivity" android:exported="false" android:launchMode="singleTask" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.OpenInAppActivity" android:exported="false" android:launchMode="singleTask" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.OpenAssistBrowserInAppActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.LoadDetailsWebViewActivity" android:exported="false" android:launchMode="standard" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/activityTheme" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.CountrySelectorActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.MainBrowserActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.MainBrowserActivity_New" android:exported="false" android:launchMode="singleTask" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.HomeActivity" android:exported="false" android:launchMode="singleTask" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.hsbcnet.HSBCNetMainBrowserActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.hsbcnet.HSBCNetHomeActivity" android:exported="false" android:launchMode="singleTask" android:configChanges="orientation" />
+        <activity android:theme="@style/activityTheme" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.AcceptanceActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:theme="@style/activityTheme" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.EulaActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.LaunchActivity" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/SsoDialog" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.SSOLoadingActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:theme="@style/FullHeightDialog" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.PopMenuActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.absl.AbslActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.fileupload.FileUploadActivity" android:exported="false" android:launchMode="standard" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.SessionTimeoutReauthActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.LanguageSelectorActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.adapter.captureimage.activities.CaptureImageActivity" android:exported="false" android:launchMode="standard" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.LoadingActivity" android:launchMode="singleTask" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.ErrorActivity" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.FuncErrorActivity" android:launchMode="singleTask" android:configChanges="orientation" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.OnBoardingPageActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.nfc.activities.NfcServiceDiscoveryActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.nfc.activities.NfcSubscriptionActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" android:windowSoftInputMode="adjustResize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.nfc.activities.NfcTransactionActivity" android:exported="false" android:launchMode="singleTask" android:configChanges="orientation" android:windowSoftInputMode="adjustResize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.nfc.activities.NfcSettingsActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" android:windowSoftInputMode="adjustResize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.nfc.activities.NfcLifeCycleActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" android:windowSoftInputMode="adjustResize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.nfc.activities.NfcTcAcceptanceActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:theme="@style/FullHeightDialog" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.nfc.activities.NfcWalletManagementActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.nfc.activities.NfcOpenInAppActivity" android:exported="false" android:launchMode="standard" android:configChanges="orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.scan.CaptureActivity" android:exported="false" android:launchMode="standard" android:screenOrientation="landscape" android:configChanges="orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.nfc.activities.NfcPaymentOptionActivity" android:exported="false" android:launchMode="standard" android:screenOrientation="portrait" android:configChanges="orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name="com.hangseng.mobilewalletapp.view.activity.StartWalletActivity" android:exported="false" android:configChanges="orientation" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.hangseng.mobilewalletapp.view.activity.CardListActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.hangseng.mobilewalletapp.view.activity.MainActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="orientation" android:noHistory="true">
+            <intent-filter android:priority="0">
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="mclabs/shopbuddy" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.hangseng.mobilewalletapp.view.activity.TransactionListActivity" android:screenOrientation="portrait" android:configChanges="orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.hangseng.mobilewalletapp.view.activity.MainMenuActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.nfc.action.TRANSACTION_DETECTED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="nfc" android:host="secure" android:port="0" android:pathPrefix="/a000000004101020" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gsma.services.nfc.action.TRANSACTION_EVENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="nfc" android:host="secure" android:port="0" android:pathPattern="/.*/a000000004101020.*" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.hangseng.mobilewalletapp.view.activity.GetACardActivityGroup" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.hangseng.mobilewalletapp.view.activity.CouponListActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.htsu.hsbcpersonalbanking.activities.ContactListActivity" android:exported="false" android:launchMode="standard" />
+        <uses-library android:name="org.simalliance.openmobileapi" android:required="false" />
+        <uses-library android:name="com.android.nfc_extras" android:required="false" />
+        <receiver android:name="com.htsu.hsbcpersonalbanking.nfc.wrapper.tx.NfcContactlessPaymentReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.nfc_extras.action.SE_LISTEN_ACTIVATED" />
+                <action android:name="com.android.nfc_extras.action.AID_SELECTED" />
+                <action android:name="com.android.nfc_extras.action.SE_LISTEN_DEACTIVATED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.htsu.hsbcpersonalbanking.nfc.wrapper.tx.NfcAutomaticTransactionProcessor" android:permission="com.hsbc.permission.NFC_SE" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.hsbc.nfc.util.NfcConstants.PAYMENT_ATTEMPT_CALLBACK" />
+                <action android:name="com.hsbc.nfc.util.NfcConstants.PAYMENT_VMG_COUNTER_RESET" />
+                <action android:name="com.hsbc.nfc.util.NfcConstants.TSM_BACKGROUND_UPDATE_FINISHED_INTENT" />
+                <action android:name="com.hsbc.nfc.util.NfcConstants.CHECK_GMSU_VERIFIED_INTENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.htsu.hsbcpersonalbanking.nfc.service.NfcUpdateServiceReceiver" android:permission="com.hsbc.permission.NFC_SE" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.hsbc.nfc.util.NfcConstants.START_NFC_UPDATE_SERVICE" />
+                <action android:name="com.hsbc.nfc.util.NfcConstants.NFC_UPDATE_NOTIFICATION_CLICKED_INTENT" />
+            </intent-filter>
+        </receiver>
+        <service android:label="@string/nfc_service_name" android:icon="@drawable/icon" android:name="com.htsu.hsbcpersonalbanking.nfc.service.NfcUpdateService" />
+        <receiver android:name="com.htsu.hsbcpersonalbanking.notification.service.HsbcGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.htsu.hsbcpersonalbanking" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.htsu.hsbcpersonalbanking.notification.service.GCMIntentService" />
+    </application>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature android:name="android.hardware.location" android:required="false" />
+    <uses-feature android:name="android.hardware.location.network" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.SMARTCARD" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.NFC_TRANSACTION" />
+    <uses-permission android:name="com.gsma.services.nfc.permission.TRANSACTION_EVENT" />
+    <uses-feature android:name="android.hardware.nfc" android:required="false" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <permission android:name="com.htsu.hsbcpersonalbanking.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.htsu.hsbcpersonalbanking.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+</manifest>

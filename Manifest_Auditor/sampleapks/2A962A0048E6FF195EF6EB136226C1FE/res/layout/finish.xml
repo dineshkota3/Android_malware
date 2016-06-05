@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rulesMainLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/white" android:id="@id/finishTextView" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/rulesBasicText" android:layout_weight="150.0" android:inputType="textMultiLine" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/finishFooter" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@android:style/ButtonBar">
+        <Button android:id="@id/finishExitButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/finishExitButtonText" android:layout_weight="1.0" android:onClick="onExitClicked" />
+        <Button android:id="@id/finishNextButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/finishNextButtonText" android:layout_weight="1.0" android:onClick="onNextClicked" />
+    </LinearLayout>
+</LinearLayout>

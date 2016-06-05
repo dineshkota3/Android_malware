@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#00ffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textColor="#ffffffff" android:id="@id/lists_pop_previousBtn" android:background="@drawable/buttonselector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="上一段" android:layout_alignParentRight="true" />
+    <EditText android:id="@id/lists_pop_editText" android:layout_width="70.0dip" android:layout_height="wrap_content" android:editable="false" android:layout_toLeftOf="@id/lists_pop_previousBtn" android:layout_alignTop="@id/lists_pop_previousBtn" />
+    <Button android:textColor="#ffffffff" android:id="@id/lists_pop_nextBtn" android:background="@drawable/buttonselector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下一段" android:layout_toLeftOf="@id/lists_pop_editText" android:layout_alignTop="@id/lists_pop_previousBtn" />
+</LinearLayout>

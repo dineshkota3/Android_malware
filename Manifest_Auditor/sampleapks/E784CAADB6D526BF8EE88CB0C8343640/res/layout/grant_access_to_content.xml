@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/lighter_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0dip" android:textColor="@color/black" android:autoLink="web" android:id="@id/act_thank" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Button android:id="@id/button_d_f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/d_f" android:layout_alignParentBottom="true" />
+</RelativeLayout>

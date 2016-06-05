@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="40.0dip" android:textColor="#ffee742a" android:gravity="center" android:id="@id/ebooktext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/bookname" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Button android:textSize="30.0dip" android:id="@id/ebookstart" android:background="@drawable/sbt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开始阅读" />
+</LinearLayout>

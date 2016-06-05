@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="11" android:versionName="2.4" android:installLocation="auto" package="com.myairtelapp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:anyDensity="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <application android:theme="@*android:style/Theme.Black.NoTitleBar" android:label="@string/app_name" android:icon="@drawable/icon" android:name="com.myairtelapp.MyApplication">
+        <activity android:name="SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="HomeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="BillDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="NotificationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="UserProfileActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="TandCActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="ManageServicesActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="HelpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="BillPlanActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="ThreeGActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="SubmitKnowMoreActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="ThreeGUsage" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="ThreeGAllTeriffActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="ThreeGCalcTeriffActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="SpecialOffersActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="PaymentHistoryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="ServiceRequestHistoryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="MyPackageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="OrderMovieActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="SpecialOffersViewAllActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="OrderGamesActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="ServiceRequestActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="EditPrefActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="BillPlanOffersActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="RechargeHistoryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="PartialRegActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="LoadingDataActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="HereforyouActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="WelcomeProfileActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="ServiceRequestDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="NonThreeGActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="SmartByteActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="AddTopUpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="ChangeBillPlanActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.money.MoneyRegActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.money.MoneyChangeMPIN" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.money.SendMoneyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.money.PayBillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.money.MoneyPastActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.money.MoneyRegCompleteActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.money.MoneyT_CActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="BillPlanDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="PlanSecurityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="BrowserActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="OfferDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="DTHChannelActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="DTHChannelProgramsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="DTHProgrameDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.sso.AddProductActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.sso.ViewRTNScreen" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.sso.AuthenticateRTNScreen" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.sso.UpdateRTNScreen" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.sso.SSOValidateOTPScreen" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.sso.SSOConfirmationScreen" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.myairtelapp.sso.RemoveProductActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <receiver android:name="com.myairtelapp.feature.BinarySMSReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DATA_SMS_RECEIVED" />
+                <data android:port="16502" />
+                <data android:scheme="sms" />
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.inmobi.adtracker.androidsdk.IMAdTrackerOverlayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="sdt-5a08aa21-0b49-49a3-8c55-32025a72dd1f" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="myairtel" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.myairtelapp.feature.IncomingSms">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.myairtelapp.AppDownloadTracker" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

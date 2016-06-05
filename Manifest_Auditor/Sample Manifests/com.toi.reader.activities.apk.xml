@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="26" android:versionName="2.6" android:installLocation="auto" package="com.toi.reader.activities"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <application android:theme="@style/Theme.MyTheme" android:label="@string/app_name" android:icon="@drawable/icon" android:name="com.toi.reader.activities.TOIApplication" android:allowBackup="true" android:installLocation="auto" android:largeHeap="true">
+        <receiver android:label="TOI (small)" android:name="com.toi.reader.activities.TOISmall_Widget" android:enabled="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.toi.reader.activities.AppWidget.ACTION_WIDGET_REFRESH" />
+                <action android:name="com.toi.reader.activities.AppWidget.ACTION_WIDGET_LEFTMOV" />
+                <action android:name="com.toi.reader.activities.AppWidget.ACTION_WIDGET_RIGHTMOV" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_providerinfo" />
+        </receiver>
+        <receiver android:label="TOI (large)" android:name="com.toi.reader.activities.TOILarget_Widget" android:enabled="@bool/honeycombOrAbove">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.toi.reader.activities.DATA_FETCHED" />
+                <action android:name="com.toi.reader.activities.AppWidget.ACTION_WIDGET_REFRESH" />
+                <action android:name="com.toi.reader.activities.AppWidget.ACTION_WIDGET_LEFTMOV" />
+                <action android:name="com.toi.reader.activities.AppWidget.ACTION_WIDGET_RIGHTMOV" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/toi_large_appwidget" />
+        </receiver>
+        <receiver android:name="com.google.ads.conversiontracking.InstallReceiver" android:enabled="false" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.mobileapptracker.Tracker" android:enabled="false" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.toi.reader.services.WidgetService" android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service android:name="com.toi.reader.services.RemoteFetchService" />
+        <activity android:name="net.hockeyapp.android.UpdateActivity" />
+        <activity android:theme="@style/Theme.Sherlock.NoActionBar" android:label="@string/app_name" android:name="com.toi.reader.activities.StartPage" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:noHistory="true">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="toi" android:host="dummy" android:path="/" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/toi_news_feed" android:name="com.toi.reader.activities.DashBoardCompDetails" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.toi.reader.activities.DashBoardCompDetails" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/toi_news_feed" android:name="com.toi.reader.activities.GetQuoteActivity" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="com.toi.reader.search.GET_QUOTE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/toi_news_feed" android:name="com.toi.reader.activities.SearchViewActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize">
+            <intent-filter>
+                <action android:name="com.toi.reader.search.VIEW_LIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/toi_news_feed" android:name="com.toi.reader.activities.CricketRecentScoreDetail" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="Comments" android:name="com.toi.reader.activities.CommentListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/toi_news_feed" android:name="com.toi.reader.activities.SettingCustomizeNotificationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.toi.reader.customize_notification.VIEW_LIST" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/toi_news_feed" android:name="com.toi.reader.market.AddToMyPortfolio" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.toi.reader.market.AddToMyPortfolio" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/toi_news_feed" android:name="com.toi.reader.market.AddToMyWatchlist" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.toi.reader.market.AddToMyWatchlist" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/toi_news_feed" android:name="com.toi.reader.activities.GalleryViewerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.toi.reader.newsfeed.VIEW_PHOTO_GALLERY" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/toi_news_feed" android:name="com.toi.reader.market.DashBoardCompDetails" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.toi.reader.market.DashBoardCompDetails" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.MyTheme" android:label="@string/app_name" android:name="com.toi.reader.activities.BaseFragmentActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenLayout|screenSize" />
+        <activity android:theme="@style/Theme.MyTheme" android:label="@string/app_name" android:name="com.toi.reader.activities.FavoriteListActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenLayout|screenSize" />
+        <activity android:theme="@style/Theme.MyTheme" android:label="@string/app_name" android:name="com.toi.reader.activities.SettingListMainActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenLayout|screenSize" />
+        <activity android:theme="@style/Theme.MyTheme" android:label="@string/app_name" android:name="com.toi.reader.activities.AboutUsActivity" android:screenOrientation="portrait" android:configChanges="orientation|screenLayout|screenSize" />
+        <activity android:theme="@style/Theme.Sherlock" android:label="@string/toi_news_feed" android:name="com.toi.reader.activities.VideoViewerActivity" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.toi.reader.newsfeed.VIEW_VIDEO" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Sherlock" android:name="com.toi.reader.activities.NewsDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="com.toi.reader.newsfeed.VIEW_NEWS_DETAIL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/toi_news_moviereview" android:name="com.toi.reader.activities.MovieReviewDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="com.toi.reader.moviereview.VIEW_DETAIL" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.toi.reader.activities.InfoPageViewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.toi.reader.activities.LiveBlogActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.toi.reader.activities.LiveBlog_WebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.toi.reader.activities.WebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.toi.reader.activities.NotificationsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.toi.reader.notifications.VIEW_LIST" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.toi.reader.activities" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.toi.reader.activities.GCMIntentService" />
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <permission android:name="com.toi.reader.activities.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.toi.reader.activities.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+</manifest>

@@ -1,0 +1,6 @@
+25001 ru_mts
+25002 ru_megafon
+25099 ru_beeline
+25020 ru_tele2
+25012 ru_baikalwestcom
+40102 kz_kcell

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="2473" android:versionName="2.4.7.3" android:installLocation="auto" package="com.shaadi.android"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true" />
+    <permission android:name="com.shaadi.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.shaadi.android.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <application android:label="Shaadi.com" android:icon="@drawable/icon" android:debuggable="false" android:allowBackup="false" android:hardwareAccelerated="true">
+        <activity android:theme="@style/CustomTheme" android:label="Shaadi.com" android:name="com.shaadi.android.main" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <data android:scheme="shaadi" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name=".SplashScreenActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="RegistrationResultActivity" />
+        <activity android:name="MessageReceivedActivity" />
+        <activity android:name="com.shaadi.android.util.CropImage" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".C2DMRegistrationReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.shaadi.android" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".C2DMMessageReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.shaadi.android" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+        <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.shaadi.android.CampaignTrackingReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <provider android:name="InternalStorageContentProvider" android:exported="true" android:authorities="com.shaadi.android" />
+    </application>
+</manifest>

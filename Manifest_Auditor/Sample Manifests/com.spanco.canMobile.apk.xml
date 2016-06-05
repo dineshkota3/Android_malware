@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="6" android:versionName="4.2" package="com.spanco.canMobile"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/canaralogo" android:debuggable="false" android:logo="@drawable/jandkbanksqaure">
+        <activity android:label="@string/title_activity_jk" android:name=".JKActivity" android:configChanges="keyboard|orientation" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomePage" />
+        <activity android:name=".RegisterPayee" />
+        <activity android:name=".FundTransferHomePage" />
+        <activity android:name=".SameBankPayeeRegister" android:noHistory="true" />
+        <activity android:name=".enquiry" />
+        <activity android:name=".Request" />
+        <activity android:name=".PayBill" />
+        <activity android:name=".MCommerce" />
+        <activity android:name=".Settings" />
+        <activity android:name=".MPIN" android:noHistory="true" />
+        <activity android:name=".ChangeChannel" />
+        <activity android:name=".PurposeOTP" />
+        <activity android:name=".AddBiller" />
+        <activity android:name=".AddBilleronHelpDesk" />
+        <activity android:name=".ChangeMPIN" android:noHistory="true" />
+        <activity android:name=".ChangeMobile" android:noHistory="true" />
+        <activity android:name=".ReferFriend" android:noHistory="true" />
+        <activity android:name=".Synchronize" android:noHistory="true" />
+        <activity android:name=".Feedback" android:noHistory="true" />
+        <activity android:name=".SBILife" android:noHistory="true" />
+        <activity android:name=".MerchantType" android:noHistory="true" />
+        <activity android:name=".MobileTopup" android:noHistory="true" />
+        <activity android:name=".OtherBankRegisterPayee" android:noHistory="true" />
+        <activity android:name=".IMPS" />
+        <activity android:name=".MPINAccountValidation" />
+        <activity android:name=".IMPSFundTransfer" android:noHistory="true" />
+        <activity android:name=".IMPSMerchantPayment" android:noHistory="true" />
+        <activity android:name=".RequestSender" android:noHistory="true" />
+        <activity android:name=".HttpRequestHandler" />
+        <activity android:name=".SMSRequestHandler" />
+        <activity android:name=".ManageSelfAcc" />
+        <activity android:name=".AddLinkAccount" android:noHistory="true" />
+        <activity android:name=".FundTransfer" android:noHistory="true" />
+        <activity android:name=".ChequeRequest" android:noHistory="true" />
+        <activity android:name=".ManagePayee" />
+        <activity android:name=".AdPayeeLocally" android:noHistory="true" />
+        <activity android:name=".EditPayee" />
+        <activity android:name=".ForcedChangeActivity" android:noHistory="true" />
+        <activity android:name=".MPINForDropDown" android:noHistory="true" />
+        <activity android:name=".DeregisterActivity" android:noHistory="true" />
+        <activity android:label="@string/title_activity_atm_branch" android:name=".AtmBranchActivity" android:noHistory="true" />
+        <activity android:label="@string/title_activity_impsfund_transfer_acc" android:name=".IMPSFundTransferAccActivity" android:noHistory="true" />
+        <activity android:name=".ProgressDialogActivity" />
+        <activity android:name=".ExitActivity" />
+        <activity android:name=".AddAadhar" />
+        <activity android:name=".Donation" />
+        <activity android:name=".DTHRecharge" />
+    </application>
+</manifest>

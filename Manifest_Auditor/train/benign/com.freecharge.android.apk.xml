@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="21" android:versionName="2.73" android:installLocation="auto" package="com.freecharge.android"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <permission android:name="com.freecharge.gcm.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.freecharge.gcm.permission.C2D_MESSAGE" />
+    <application android:label="@string/app_name" android:icon="@drawable/appicon" android:screenOrientation="portrait" android:allowBackup="true">
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:label="@string/app_name" android:name="com.freecharge.ui.SplashActivity" android:screenOrientation="portrait" android:windowBackground="@drawable/fc_splash_gradient" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.facebook.LoginActivity" />
+        <receiver android:name="com.localytics.android.ReferralReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.freecharge.util.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.freecharge.util" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.freecharge.util.GCMIntentService" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="ab744923ccd484fb626be787e8856eafc1fc70cc" />
+        <meta-data android:name="LOCALYTICS_APP_KEY" android:value="6740c024ac275e96068a101-de9f8ca4-88eb-11e3-1a04-004a77f8b47f" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
+    </application>
+</manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="13" android:versionName="3.0" package="com.aranoah.healthkart.plus"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:name="com.aranoah.healthkart.plus.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.aranoah.healthkart.plus.permission.C2D_MESSAGE" />
+    <application android:theme="@style/Theme.Sherlock.Light" android:label="@string/app_name" android:icon="@drawable/icon">
+        <receiver android:name="com.aranoah.healthkart.plus.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.aranoah.healthkart.plus" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>	;
+<service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+        <receiver android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:name="com.aranoah.healthkart.plus.SplashScreen" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:name="com.aranoah.healthkart.plus.WebViewScreen" android:launchMode="singleInstance" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:name="com.aranoah.healthkart.plus.AskToSignupOrOrderMedScreen" android:launchMode="singleInstance" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:name="com.aranoah.healthkart.plus.SignupLoginHandlerScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:label="" android:name="com.aranoah.healthkart.plus.FragmentTabsSignUpLoginScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light" android:name="com.aranoah.healthkart.plus.TNCScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light" android:name="com.aranoah.healthkart.plus.SignupScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:name="com.aranoah.healthkart.plus.HomeSearchForMedicineScreen" android:launchMode="singleInstance" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:name="com.aranoah.healthkart.plus.QuickOrderDetails" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:name="com.aranoah.healthkart.plus.QuickOrderPrescriptionsScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:name="com.aranoah.healthkart.plus.OrderByNewPrescriptionScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:name="com.aranoah.healthkart.plus.CaptureOrPickPhotoHandlerScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyTheme" android:name="com.aranoah.healthkart.plus.MedicineDetailScreen" android:launchMode="singleInstance" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyTheme" android:name="com.aranoah.healthkart.plus.OTCDetailScreen" android:launchMode="singleInstance" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyTheme" android:name="com.aranoah.healthkart.plus.CartItemsListingScreen" android:launchMode="singleInstance" android:screenOrientation="portrait" />
+        <activity android:name="com.aranoah.healthkart.plus.SignUpScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyTheme" android:name="com.aranoah.healthkart.plus.UploadPrescriptionScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyTheme" android:name="com.aranoah.healthkart.plus.PrescriptionUploadedScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyTheme" android:name="com.aranoah.healthkart.plus.AllDeliveryAddressesListScreen" android:launchMode="singleInstance" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyTheme" android:name="com.aranoah.healthkart.plus.NewDeliveryAddressScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyTheme" android:name="com.aranoah.healthkart.plus.OrderSummaryScreen" android:launchMode="singleInstance" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyTheme" android:name="com.aranoah.healthkart.plus.OrderConfirmationScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:name="com.aranoah.healthkart.plus.OrderHistoryScreen" android:launchMode="singleInstance" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyTheme" android:label="@string/app_name" android:name="com.aranoah.healthkart.plus.FragmentTabsMyAccount" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.aranoah.healthkart.plus.EditAddressDetailScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.aranoah.healthkart.plus.EarlierPrescriptionsScreen" android:screenOrientation="portrait" />
+        <activity android:label="@string/choose_file" android:icon="@drawable/ic_folder" android:name="com.ipaulpro.afilechooser.FileChooserActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.OPENABLE" />
+                <data android:mimeType="file/*" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/MyStyle__Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.aranoah.healthkart.plus.SuggestMedicine" android:screenOrientation="portrait" />
+        <service android:name="com.aranoah.healthkart.plus.BGService" />
+    </application>
+</manifest>

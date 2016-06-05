@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cradient_background_start">#fff9f9f9</color>
+    <color name="cradient_background_end">#ffeeeeee</color>
+    <color name="button_background_start">#fff3ae1b</color>
+    <color name="button_background_end">#ffbb6008</color>
+    <color name="button_select_background_start">#ff449def</color>
+    <color name="button_select_background_end">#ff2f6699</color>
+    <color name="button_text_color">#ffffffff</color>
+</resources>

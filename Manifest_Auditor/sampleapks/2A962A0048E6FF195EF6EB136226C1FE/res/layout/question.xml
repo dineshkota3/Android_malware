@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rulesQuestionLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/white" android:id="@id/questionTextView" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/questionBasicText" android:layout_weight="150.0" android:inputType="textMultiLine">
+        <requestFocus />
+    </TextView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/questionFooter" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@android:style/ButtonBar">
+        <Button android:id="@id/questionNoButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/questionNoButtonText" android:layout_weight="1.0" android:onClick="onNoClicked" />
+        <Button android:id="@id/questionYesButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/questionYesButtonText" android:layout_weight="1.0" android:onClick="onYesClicked" />
+    </LinearLayout>
+</LinearLayout>

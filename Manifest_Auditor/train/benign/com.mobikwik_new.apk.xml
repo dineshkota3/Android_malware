@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="61" android:versionName="4.2" package="com.mobikwik_new"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <permission android:name="com.mobikwik_new.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.mobikwik_new.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/logo" android:name="com.mobikwik_new.MyApp">
+        <activity android:theme="@style/AppTheme" android:label="Mobikwik" android:name="com.mobikwik_new.MobikwikMain" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="Recharge" android:name="com.mobikwik_new.RechargeMain" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Register" android:name="com.mobikwik_new.RegisterMain" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_main" android:name="com.mobikwik_new.AddBalance" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_card_or_netbanking" android:name="com.mobikwik_new.CardOrNetbanking" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_card_details" android:name="com.mobikwik_new.PaymentGateway" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_netbanking" android:name="com.mobikwik_new.Netbanking" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_pgweb_view" android:name="com.mobikwik_new.ZaakpayAPI" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_cash_pay" android:name="com.mobikwik_new.AboutCashPay" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_cash_pay" android:name="com.mobikwik_new.CashPay" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_debit_cards" android:name="com.mobikwik_new.DebitCards" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_pgweb_view" android:name="com.mobikwik_new.CCAVENUEAPI" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_biller_landline" android:name="com.mobikwik_new.Biller_Landline" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_biller_electricity" android:name="com.mobikwik_new.Biller_Electricity" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_biller_gas" android:name="com.mobikwik_new.Biller_Gas" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_biller_insurance" android:name="com.mobikwik_new.Biller_Insurance" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.mobikwik_new.OffersHome" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.mobikwik_new.OffersListing" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.mobikwik_new.OfferDetail" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_promo" android:name="com.mobikwik_new.Promo" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_operator_selection" android:name="com.mobikwik_new.OperatorSelection" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_plan_detail" android:name="com.mobikwik_new.PlanDetail" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_pgweb_view" android:name="com.mobikwik_new.PGWebView" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_billing_address" android:name="com.mobikwik_new.BillingAddress" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Shipping Details" android:name="com.mobikwik_new.ShippingAddress" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Transaction Response" android:name="com.mobikwik_new.PostRechargeActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Transaction Response" android:name="com.mobikwik_new.PostPaymentActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Transaction Response" android:name="com.mobikwik_new.CashPayIntroActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Transaction Response" android:name="com.mobikwik_new.RegisterPhoneExistsActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Transaction Response" android:name="com.mobikwik_new.security.SecuritySettingsActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme.Transparent" android:label="PIN Verification" android:name="com.mobikwik_new.security.PinVerificationHelperActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Transaction Response" android:name="com.mobikwik_new.security.TxnLockActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Transaction Response" android:name="com.mobikwik_new.security.SetTxnPINActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Transaction Response" android:name="com.mobikwik_new.security.ForgetTxnPINActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Transaction Response" android:name="com.mobikwik_new.security.ChangeTxnPINActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="Transaction Response" android:name="com.mobikwik_new.security.RemoteWipeInfoActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.mobikwik_new" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.mobikwik_new.GCMIntentService" />
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+        <receiver android:name="com.mobikwik_new.helper.InstallReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/title_activity_login" android:name="com.mobikwik_new.LoginActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_forgot_password" android:name="com.mobikwik_new.ForgotPassword" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="com.mobikwik_new.AppUpdate" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_saved_connections" android:name="com.mobikwik_new.SavedConnections" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_saved_connections_detail" android:name="com.mobikwik_new.SavedConnectionDetail" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_saved_connection_edit" android:name="com.mobikwik_new.SavedConnectionEdit" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_my_account" android:name="com.mobikwik_new.MyAccount" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_support_section" android:name="com.mobikwik_new.SupportSection" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_transaction_history" android:name="com.mobikwik_new.TransactionHistory" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_browse_plans" android:name="com.mobikwik_new.BrowsePlans" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/title_activity_about_us" android:name="com.mobikwik_new.AboutUs" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/DialogTheme" android:name="com.mobikwik_new.GenericMessage" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <meta-data android:name="AdjustAppToken" android:value="b3txt26nqcjq" />
+        <meta-data android:name="AdjustLogLevel" android:value="assert" />
+        <meta-data android:name="AdjustEnvironment" android:value="production" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    </application>
+</manifest>

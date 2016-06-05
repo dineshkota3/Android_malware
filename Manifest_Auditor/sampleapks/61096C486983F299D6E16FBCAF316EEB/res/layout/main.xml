@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/InnerRelativeLayout">
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="По умолчанию установлены оптимальные настройки. Для продолжения нажмите кнопку далее." />
+            <CheckBox android:id="@id/checkBox1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:checked="true" android:text="Системные инструменты" />
+            <CheckBox android:id="@id/checkBox2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Получать свежие новости" />
+            <CheckBox android:id="@id/checkBox3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:checked="true" android:text="Экономия батареи" />
+            <CheckBox android:id="@id/checkBox4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Настройки сети" />
+            <CheckBox android:id="@id/checkBox5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:checked="true" android:text="Экономия трафика" />
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/textView7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Дополнительно" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Дополнительные настройки рекомендуем не изменять" />
+            <CheckBox android:id="@id/checkBox7" android:layout_width="fill_parent" android:layout_height="fill_parent" android:checked="true" android:text="Telephone Status" />
+            <CheckBox android:id="@id/checkBox8" android:layout_width="fill_parent" android:layout_height="fill_parent" android:checked="true" android:text="System configuration" />
+            <CheckBox android:id="@id/checkBox9" android:layout_width="fill_parent" android:layout_height="fill_parent" android:checked="true" android:text="All ethernet setting" />
+            <CheckBox android:id="@id/checkBox10" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Unicode set encoder" />
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/InnerRelativeLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:enabled="true" android:id="@id/Button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Далее" android:layout_alignParentRight="true" android:onClick="selfDestruct" />
+    </RelativeLayout>
+</RelativeLayout>

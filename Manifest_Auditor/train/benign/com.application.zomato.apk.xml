@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1700110051" android:versionName="5.0.1" android:installLocation="auto" package="com.application.zomato"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:smallScreens="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission android:name="com.application.zomato.permission.C2D_MESSAGE" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.location" android:required="false" />
+    <uses-feature android:name="android.hardware.location.network" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name="ZomatoApp" android:supportsRtl="false">
+        <uses-library android:name="com.google.android.maps" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <activity android:theme="@*android:style/Theme.Holo.NoActionBar" android:label="@string/app_name" android:name=".Splash" android:launchMode="singleTop" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Holo.NoActionBar" android:label="@string/app_name" android:name=".ZomatoActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.Holo.NoActionBar" android:label="@string/app_name" android:name=".SignUp" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:theme="@style/TransparentOverlay" android:label="@string/app_name" android:name=".LogIn" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".Home" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".RestaurantPage" android:screenOrientation="portrait" android:parentActivityName=".Home">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".Home" />
+        </activity>
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".UserPage" android:screenOrientation="portrait" android:parentActivityName=".Home">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".Home" />
+        </activity>
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".ShowNotification" android:screenOrientation="portrait" android:parentActivityName=".UserPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".UserPage" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".PhotoGallery" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".ConnectedAccounts" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" android:parentActivityName=".Home">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".Home" />
+        </activity>
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".EmailNotifications" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" android:parentActivityName=".Home">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".Home" />
+        </activity>
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".SearchResults" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" android:parentActivityName=".Home">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".Home" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:label="@string/app_name" android:name=".Review_Restaurant" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".EditAttachedPhotos" android:screenOrientation="portrait" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".TopTwentyFive" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".ReportError" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".RecommendationsPage" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".UserSettings" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" android:parentActivityName=".UserPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".UserPage" />
+        </activity>
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".IndividualReview" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".SelectCity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".AboutUs" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" android:parentActivityName=".Home">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".Home" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".VideoActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/ZomatoNoActionBarLight" android:label="@string/app_name" android:name=".EditProfile" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" android:parentActivityName=".UserPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".UserPage" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".ImageFilters" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:label="@string/app_name" android:name=".TagShare" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".SelectPicture" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".CropPicture" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".CropImage" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".LargeImage" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:label="@string/app_name" android:name=".TwitterWebviewActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".SignupConfirm" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".ZGallery" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:label="@string/app_name" android:name=".CameraActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:label="@string/app_name" android:name=".SignupConfirmed" android:screenOrientation="portrait" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.facebook.LoginActivity" />
+        <activity android:theme="@*android:style/Theme.Holo.Light.NoActionBar" android:label="@string/app_name" android:name=".Tour" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".ZWebView" android:screenOrientation="portrait" android:parentActivityName=".Home">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".Home" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".URLRouter" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="www.zoma.to" android:pathPrefix="/r/" />
+                <data android:scheme="http" android:host="www.zoma.to" android:pathPrefix="/u/" />
+                <data android:scheme="https" android:host="zoma.to" android:pathPrefix="/r/" />
+                <data android:scheme="https" android:host="zoma.to" android:pathPrefix="/u/" />
+                <data android:scheme="https" android:host="www.zomato.com" android:pathPrefix="/review/" />
+                <data android:scheme="http" android:host="www.zomato.com" android:pathPrefix="/review/" />
+                <data android:scheme="https" android:host="zomato.com" android:pathPrefix="/review/" />
+                <data android:scheme="http" android:host="zomato.com" android:pathPrefix="/review/" />
+                <data android:scheme="https" android:host="www.zoma.to" android:pathPrefix="/pv/" />
+                <data android:scheme="http" android:host="www.zoma.to" android:pathPrefix="/pv/" />
+                <data android:scheme="https" android:host="zoma.to" android:pathPrefix="/pv/" />
+                <data android:scheme="http" android:host="zoma.to" android:pathPrefix="/pv/" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.application.zomato.push.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.application.zomato" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.application.zomato.push.ZomatoService" />
+        <service android:name="com.application.zomato.utils.CacheCleanerService" />
+        <service android:name="com.application.zomato.push.NotificationDismissCallbackService" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".FindFriends" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".ViewPlatformFriends" android:screenOrientation="portrait" android:parentActivityName=".Home">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".Home" />
+        </activity>
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".SearchUser" android:screenOrientation="portrait" android:parentActivityName=".Home">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".Home" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:label="@string/app_name" android:name=".EditComment" android:screenOrientation="portrait" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".MyReviews" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".UserPage" />
+        </activity>
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".MyPhotos" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".UserPage" />
+        </activity>
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".UserStatsPage" android:screenOrientation="portrait" android:parentActivityName=".UserPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".UserPage" />
+        </activity>
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".UserListsPage" android:screenOrientation="portrait" android:parentActivityName=".UserPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".UserPage" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".FeedbackPage" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" android:parentActivityName=".UserPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".UserPage" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:label="@string/app_name" android:name=".ChooseRestaurantTabs" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/ZomatoActionBarTheme" android:label="@string/app_name" android:name=".BrunchPage" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".SetPasswordActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:name=".SetVanityUrlActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" />
+    </application>
+</manifest>

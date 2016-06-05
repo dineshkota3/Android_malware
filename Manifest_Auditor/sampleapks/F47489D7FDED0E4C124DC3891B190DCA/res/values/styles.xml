@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="btnBlue" parent="@android:style/Widget.Button">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@drawable/bluebutton</item>
+        <item name="android:layout_margin">3.0dip</item>
+    </style>
+</resources>

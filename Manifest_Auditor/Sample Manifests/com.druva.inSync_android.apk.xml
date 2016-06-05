@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="22" android:versionName="3.4-r1606" package="com.druva.inSync_android"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <permission android:name="com.druva.inSync_android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.druva.inSync_android.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <application android:label="@string/app_name" android:icon="@drawable/icon" android:name="com.druva.inSync.InSyncApplication" android:launchMode="singleTask" android:allowBackup="false">
+        <activity android:theme="@style/inSyncNoActionBarTheme" android:name="com.druva.inSync.ValidationActivity" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/launchTheme" android:name="com.druva.inSync.HomeScreenActivity" android:configChanges="orientation|screenSize" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/inSyncTheme" android:name="com.druva.inSync.ShareLinkActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/inSyncTheme" android:name="com.druva.inSync.ConfigurationActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/inSyncTheme" android:name="com.druva.inSync.ShareFileWithInSync" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustPan">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/inSyncTheme" android:label="@string/app_name" android:name="com.druva.inSync.HelpActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/inSyncNoActionBarTheme" android:label="@string/app_name" android:name="com.druva.inSync.SamlActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/inSyncTheme" android:label="@string/app_name" android:name="com.druva.inSync.NewContentViewActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <receiver android:name="com.druva.inSync.receiver.ConnectivityReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.druva.inSync.receiver.UpgradeReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.druva.inSync.receiver.SyncReceiver" />
+        <receiver android:name="com.druva.inSync.util.LocationReceiver" />
+        <receiver android:name="com.druva.inSync.receiver.EncryptionNotifierReceiver" />
+        <service android:name="com.druva.inSync.services.SyncService" android:enabled="true" />
+        <service android:name="com.druva.inSync.services.ShareService" android:enabled="true" />
+        <service android:name="com.druva.inSync.services.EncryptionUpgradeService" android:enabled="true" />
+        <service android:name="com.druva.inSync.services.UpdateShareService" android:enabled="true" />
+        <service android:name="com.druva.inSync.services.LocationService" android:enabled="true" />
+        <service android:name="com.druva.inSync.services.RestoreIntentService" android:enabled="true" />
+        <service android:name="com.druva.inSync.services.CheckNewVersionService" android:enabled="true" />
+        <receiver android:name="com.druva.inSync.receiver.C2DMRegistrationReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.druva.inSync_android" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.druva.inSync_android" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.druva.inSync.services.GcmIntentService" />
+        <receiver android:name="com.druva.inSync.receiver.OnBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:label="@string/insync_device_admin" android:name="com.druva.inSync.receiver.InSyncDeviceAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN" android:description="@string/sample_device_admin_description">
+            <meta-data android:name="android.app.device_admin" android:resource="@xml/device_admin_sample" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    </application>
+</manifest>

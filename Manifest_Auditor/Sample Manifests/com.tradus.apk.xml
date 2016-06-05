@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:debuggable="true" android:versionCode="2014042913" android:versionName="1.99" android:installLocation="auto" package="com.tradus"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <permission android:name="com.tradus.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.tradus.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-feature android:name="android.hardware.location" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <application android:label="@string/app_name" android:icon="@drawable/appicon" android:name="com.tradus.ui.TradusApp" android:allowBackup="true" android:hardwareAccelerated="true" android:largeHeap="true">
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.ui.NewSplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.locateme.LocateMe" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme_ActionBar_Tradus" android:label="@string/app_name" android:name="com.tradus.ui.TradusMotherActivity" android:exported="true" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.tradus.ui.TradusLinkActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.login.CustomLoginFragmentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.login.RegistrationActivity" android:screenOrientation="portrait" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+        <activity android:theme="@style/Theme.Sherlock.NoActionBar" android:label="Tradus" android:name="com.tradus.product.ImageSwiperActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.NoActionBar" android:label="Tradus" android:name="com.tradus.product.SellerInfoScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.NoActionBar" android:label="Tradus" android:name="com.tradus.product.SellerScreen" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.login.ForgotPasswordActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.settings.SettingScreenActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.pushnotification.PushNotificationScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.myorders.MyOrdersHistoryScreen" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.payment.ProceedActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.payment.SinglePageCheckout" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.myorders.SuborderActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.ui.CustomerSupportFragment" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.ui.TermsAndConditionFragment" android:screenOrientation="portrait" />
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.ui.DeepLinkWebview" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.login.NewLoginActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/CustomActionBarTheme" android:label="@string/app_name" android:name="com.tradus.pushnotification.NotificationsActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.product.SellerStoreActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Sherlock.Light.NoActionBar" android:label="@string/app_name" android:name="com.tradus.RatingTheApp" android:screenOrientation="portrait" />
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.tradus" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".GCMIntentService" />
+        <receiver android:name="com.tradus.widget.WidgetProvidera" android:enabled="@bool/atLeastHoneycomb"> >
+<intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.android.stackwidget.TOAST_ACTION" />
+                <action android:name="com.example.android.stackwidget.SEARCH_ACTION" />
+                <action android:name="com.example.android.stackwidget.REFRESH_ACTION" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widgetinfo" />
+        </receiver>
+        <receiver android:name="com.tradus.widget.WidgetProvideraBelowHoneyComb" android:enabled="@bool/notHoneycomb"> >
+<intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.android.stackwidget.TOAST_ACTION" />
+                <action android:name="com.example.android.stackwidget.SEARCH_ACTION" />
+                <action android:name="com.example.android.stackwidget.REFRESH_ACTION" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widgetinfoold" />
+        </receiver>
+        <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.tradus.tracking.DownloadTracker" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="mobi.vserv.android.trackingengine.VservInstallReceiver" />
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+        <receiver android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver" android:exported="true" />
+        <service android:name="com.tradus.widget.WidgetServicea" android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service android:name="com.tradus.widget.WidgetServiceOld" android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service android:name="com.tradus.backgroundtask.AlarmReceiver" />
+        <service android:name="com.tradus.backgroundtask.RestartAppService" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDefIXgvP0wbFz4r4nLuFtNRfSz98hy2HQ" />
+    </application>
+</manifest>

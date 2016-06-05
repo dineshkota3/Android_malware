@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="24" android:versionName="1.2.24" package="com.shaukk.http"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <permission android:name="com.shaukk.http.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.shaukk.http.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:debuggable="false" android:allowBackup="true">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <activity android:label="@string/app_name" android:name="com.shaukk.http.page.home.LandingPage" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.LANDINGPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_login" android:name="com.shaukk.http.page.home.PhoneLoginPage" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.home.LandingPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.home.LandingPage" />
+            <intent-filter>
+                <action android:name="com.shaukk.PHONELOGINPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_signuppage" android:name="com.shaukk.http.page.home.SignupPage" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.home.PhoneLoginPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.home.PhoneLoginPage" />
+            <intent-filter>
+                <action android:name="com.shaukk.SIGNUPPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_createcommunity" android:name="com.shaukk.http.page.communities.RequestCommunity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.CREATECOMMUNITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_conversationpage" android:name="com.shaukk.http.page.communities.ConversationPage" android:launchMode="singleTop" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.CONVERSATIONPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_communitypage" android:name="com.shaukk.http.page.communities.CommunityPage" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.communities.MyCommunity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.communities.MyCommunity" />
+            <intent-filter>
+                <action android:name="com.shaukk.COMMUNITYPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_communitypage" android:name="com.shaukk.http.page.communities.CommunityInfoPage" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.COMMUNITYINFOPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.shaukk.http.page.communities.MyCommunity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.shaukk.http.page.home.SearchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
+        </activity>
+        <activity android:label="@string/actionbar_title_explorecommunities" android:name="com.shaukk.http.page.communities.ExploreCommunity" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.communities.MyCommunity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.communities.MyCommunity" />
+            <intent-filter>
+                <action android:name="com.shaukk.EXPLORECOMMUNITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_communitypage" android:name="com.shaukk.http.page.communities.WaitlistCommunityPage" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.communities.MyCommunity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.communities.MyCommunity" />
+            <intent-filter>
+                <action android:name="com.shaukk.WAITLISTCOMMUNITYPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_createplan" android:name="com.shaukk.http.page.communities.CreatePlan" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.communities.CommunityPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.communities.CommunityPage" />
+            <intent-filter>
+                <action android:name="com.shaukk.CREATEEVENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_settings" android:name="com.shaukk.http.page.home.Settings" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_terms_of_use" android:name="com.shaukk.http.page.home.TermOfUsePage" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.home.SignupPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.home.SignupPage" />
+            <intent-filter>
+                <action android:name="com.shaukk.TERMSOFUSE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_feedback" android:name="com.shaukk.http.page.home.FeedbackPage" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.FEEDBACKPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_about" android:name="com.shaukk.http.page.home.AboutPage" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.ABOUTPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_logout" android:name="com.shaukk.http.page.home.Logout" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.LOGOUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_profilepage" android:name="com.shaukk.http.page.profile.ProfilePage" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.PROFILEPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_conversationpage" android:name="com.shaukk.http.page.communities.UsersGoing" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.communities.ConversationPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.communities.ConversationPage" />
+            <intent-filter>
+                <action android:name="com.shaukk.USERSGOING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_viewallcommunities" android:name="com.shaukk.http.page.profile.ViewAllCommunities" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.profile.ProfilePage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.profile.ProfilePage" />
+            <intent-filter>
+                <action android:name="com.shaukk.VIEWALLCOMMUNITIES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_viewallfriends" android:name="com.shaukk.http.page.profile.ViewAllFriends" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.profile.ProfilePage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.profile.ProfilePage" />
+            <intent-filter>
+                <action android:name="com.shaukk.VIEWALLCOMMUNITIES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_viewallmembers" android:name="com.shaukk.http.page.communities.ViewAllMembers" android:screenOrientation="portrait" android:parentActivityName="com.shaukk.http.page.communities.CommunityInfoPage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.shaukk.http.page.communities.CommunityInfoPage" />
+            <intent-filter>
+                <action android:name="com.shaukk.VIEWALLMEMBERS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_custom" android:name="com.shaukk.http.page.home.CustomPage" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.DOWNLOADLINK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_custom" android:name="com.shaukk.http.page.home.ProfilePicUpload" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.PROFILEPICUPLOAD" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/actionbar_title_custom" android:name="com.shaukk.http.page.home.CalendarActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.shaukk.CALENDARACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.shaukk.http.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.shaukk.http" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.shaukk.http.GcmIntentService" />
+        <meta-data android:name="apptentive_api_key" android:value="049988d1d129ec6f0e9aa3c63de6923c5325c27fdcbc39c6f99ebc108598f033" />
+        <activity android:theme="@style/Apptentive.Theme.Transparent" android:name="com.apptentive.android.sdk.ViewActivity" />
+        <receiver android:name="com.apptentive.android.sdk.comm.NetworkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="a25892767d84f4f94e2d5dbed4fa32eb24a5a7f5" />
+    </application>
+</manifest>

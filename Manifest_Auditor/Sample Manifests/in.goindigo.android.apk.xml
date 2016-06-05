@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="111" android:versionName="1.1.1" package="in.goindigo.android"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission android:name="in.goindigo.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="in.goindigo.android.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:allowBackup="true">
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.Splash" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.IndiGoHome" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.FlightSearchHome" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="in.goindigo.android.ui.ShowPopUp" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.ChooseCity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.RoundTripResult" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.OneWayResult" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.RoundTripSummary" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.OneWaySummary" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.TravellerDetails" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.BookingConfirmHold" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.PreBookingHold" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.CheckinHome" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.FlightStatus" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.CheckinSummary" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.CheckinSeatMap" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.FlightStatusDetails" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.CheckInConfirmation" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.FlightScheduleHome" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.FlightSchedule" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.InFlightMenu" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.FareRulesHome" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.TermsAndConditionsCheckin" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.TermsAndConditionsBooking" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.PayBooking" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.PayBookingConfirmation" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.TermsAndConditionsView" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.goindigo.android.ui.PayBookingFailed" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="in.goindigo.android.ui.GCMNotification" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <receiver android:label="NetworkChangeReceiver" android:name="in.goindigo.android.task.NetworkStateMonitor">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="in.goindigo.android" />
+            </intent-filter>
+        </receiver>
+        <service android:name="in.goindigo.android.task.CacheUpdateService" />
+        <service android:name="in.goindigo.android.GCMIntentService" />
+    </application>
+</manifest>

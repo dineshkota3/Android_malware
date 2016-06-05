@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="rulesMainLayout">false</item>
+    <item type="id" name="finishTextView">false</item>
+    <item type="id" name="finishFooter">false</item>
+    <item type="id" name="finishExitButton">false</item>
+    <item type="id" name="finishNextButton">false</item>
+    <item type="id" name="mainLayout">false</item>
+    <item type="id" name="textView">false</item>
+    <item type="id" name="textViewExitContainer">false</item>
+    <item type="id" name="textViewExit">false</item>
+    <item type="id" name="footer">false</item>
+    <item type="id" name="firstScreenRulesButton">false</item>
+    <item type="id" name="firstScreenAcceptButton">false</item>
+    <item type="id" name="memberListView">false</item>
+    <item type="id" name="memberExitButton">false</item>
+    <item type="id" name="memberOpenButton">false</item>
+    <item type="id" name="rulesQuestionLayout">false</item>
+    <item type="id" name="questionTextView">false</item>
+    <item type="id" name="questionFooter">false</item>
+    <item type="id" name="questionNoButton">false</item>
+    <item type="id" name="questionYesButton">false</item>
+    <item type="id" name="rulesTextView">false</item>
+    <item type="id" name="rulesFooter">false</item>
+    <item type="id" name="rulesExitButton">false</item>
+    <item type="id" name="rulesNextButton">false</item>
+</resources>

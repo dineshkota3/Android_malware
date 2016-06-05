@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="4" android:versionName="@string/versionNumber" android:hardwareAccelerated="true" package="com.kaltura.kms"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:label="@string/app_name" android:icon="@drawable/icon_kms" android:debuggable="false" android:hardwareAccelerated="true">
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:label="@string/app_name" android:name="com.kaltura.kms.kmsLogin" android:configChanges="locale|keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

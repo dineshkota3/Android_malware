@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1" android:versionName="1.0" package="com.federalbank"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:theme="@style/RakBank" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:debuggable="false">
+        <uses-library android:name="com.google.android.maps" />
+        <activity android:label="@string/app_name" android:name=".BankingApps" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" android:clearTaskOnLaunch="true" android:screenOrientation="portrait" />
+        <activity android:name="com.federalbank.MyMenuActivity" android:screenOrientation="portrait" />
+        <activity android:name=".EnquiriesActivity" android:screenOrientation="portrait" />
+        <activity android:name=".EnquiriesGroup" android:screenOrientation="portrait" />
+        <activity android:name=".RequestsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".RequestsGroup" android:screenOrientation="portrait" />
+        <activity android:name=".TransfersActivity" android:screenOrientation="portrait" />
+        <activity android:name=".TransfersGroup" android:screenOrientation="portrait" />
+        <activity android:name=".PaymentsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".PaymentsActivityGroup" android:screenOrientation="portrait" />
+        <activity android:name=".MCommerce" android:screenOrientation="portrait" />
+        <activity android:name=".MCommerceGroup" android:screenOrientation="portrait" />
+        <activity android:name=".IMPSGroup" android:screenOrientation="portrait" />
+        <activity android:name=".IMPSActivity" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.CustomerCareActivity" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.CustomerDetailsDisplay" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.ViewIFSCActivity" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.ViewIfscDisplay" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.ATMLocator" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.ATMSearchList" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.BranchLocator" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.BranchSearchList" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.BranchLocator" android:screenOrientation="portrait" />
+        <activity android:name=".activation.ActivationPrePage" android:screenOrientation="portrait" />
+        <activity android:name=".activation.ActivationPage" android:screenOrientation="portrait" />
+        <activity android:name=".payments.ViewPayeeList" android:screenOrientation="portrait" />
+        <activity android:name=".payments.OtherFBAccountsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".payments.NEFTOtherBankActivity" android:screenOrientation="portrait" />
+        <activity android:name=".payments.DataDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".payments.ViewPayeeGroup" android:screenOrientation="portrait" />
+        <activity android:name=".enquiry.EnquiryPinActivity" android:screenOrientation="portrait" />
+        <activity android:name=".enquiry.BalanceEnquiryActivity" android:screenOrientation="portrait" />
+        <activity android:name=".enquiry.MiniStatementpinActivity" android:screenOrientation="portrait" />
+        <activity android:name=".enquiry.MiniStatementActivity" android:screenOrientation="portrait" />
+        <activity android:name=".enquiry.PastFinActivity" android:screenOrientation="portrait" />
+        <activity android:name=".enquiry.EnquiryPinGroup" android:screenOrientation="portrait" />
+        <activity android:name=".enquiry.ChequeStatpinActivity" android:screenOrientation="portrait" />
+        <activity android:name=".request.RequestDDGroup" android:screenOrientation="portrait" />
+        <activity android:name=".request.CheckBookRequest" android:screenOrientation="portrait" />
+        <activity android:name=".request.HotMarkDebitCardActivity" android:screenOrientation="portrait" />
+        <activity android:name=".request.PureGoldRateActivity" android:screenOrientation="portrait" />
+        <activity android:name=".request.InterestRatePin" android:screenOrientation="portrait" />
+        <activity android:name=".request.InterestRateActivity" android:screenOrientation="portrait" />
+        <activity android:name=".request.ViewStockPriceActivity" android:screenOrientation="portrait" />
+        <activity android:name=".request.OtherRequestsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".request.OtherRequestGroup" android:screenOrientation="portrait" />
+        <activity android:name=".request.PinMailerAcknowledgement" android:screenOrientation="portrait" />
+        <activity android:name=".request.FedNetPinChange" android:screenOrientation="portrait" />
+        <activity android:name=".request.FedNetIDUnlock" android:screenOrientation="portrait" />
+        <activity android:name=".request.ChequeBookAcknowledgement" android:screenOrientation="portrait" />
+        <activity android:name=".request.LoanAmortization" android:screenOrientation="portrait" />
+        <activity android:name=".request.CertificateDepLoanAccount" android:screenOrientation="portrait" />
+        <activity android:name=".request.PrematureClosureFD" android:screenOrientation="portrait" />
+        <activity android:name=".request.DepositLoanStatement" android:screenOrientation="portrait" />
+        <activity android:name=".request.TermDepositRenewal" android:screenOrientation="portrait" />
+        <activity android:name=".request.FeedBackRequest" android:screenOrientation="portrait" />
+        <activity android:name=".request.OpenAccountRequest" android:screenOrientation="portrait" />
+        <activity android:name=".request.OpenAccountReqGroup" android:screenOrientation="portrait" />
+        <activity android:name=".request.OpenAccountDetails" android:screenOrientation="portrait" />
+        <activity android:name=".request.DebitCardPinActivity" android:screenOrientation="portrait" />
+        <activity android:name=".request.DebitcardpinChangeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".request.RequestDD" android:screenOrientation="portrait" />
+        <activity android:name=".request.RequestDDDetails" android:screenOrientation="portrait" />
+        <activity android:name=".request.ChangePinActivity" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.MyMMIDActivity" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.SelfAccountTransfer" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.SelfAccountTransferGroup" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.OtherFBAccounts" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.OtherFBAccountsGroup" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.NEFTTransfer" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.NEFTTransferGroup" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.InstantPayTransfer" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.InstantPayTransferGroup" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.InstantAccPayTransfer" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.InstantAccPayGroup" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.InstantPayMurchant" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.InstantPayMurchantGruop" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.ImpsGenerateOTP" android:screenOrientation="portrait" />
+        <activity android:name=".transfer.ImpsGenerateOTPGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirDestgPic" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirDestActivity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirOrigingPic" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MobileRecharge" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MobileRechargeGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.DTHRecharge" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.DTHRechargeGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.TicketBooking" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.TicketBookingGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MovieTicketCity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MovieTicketLanguage" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MovieTicketCinimas" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MovieTicketTime" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MovieTicketTimeGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MovieTicketConfirm" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MovieTicketSuccess" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.AirTicketBooking" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.AirTicketBookingGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.AiTicketOrigin" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MHealthGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MHealthActivity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MobileRechargeGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.TempleDonationActivity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.TempleDonationDisplay" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MHealthPackageBook" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MHealthPackageDetails" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MHealthDetailGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MHealthInPatientActivity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MHealthInPatientGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MFeeNameGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MFeeNameActivity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MFeeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MFeeConfirmActivity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MFeeConfirmGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirInputtActivity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirFlifhtInfo" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirFlightDisplayGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirFlightInfoDisplay" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirPassengerScreen" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.CheckPNRActivity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.CheckPNRFinal" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.CheckPNRFinal" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirTransDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirPassengerAccount" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirPassengerAccountGroup" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.MAirTransDisplay" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.AirticketConfirm" android:screenOrientation="portrait" />
+        <activity android:name=".mcommerce.AirticketSuccess" android:screenOrientation="portrait" />
+        <activity android:name=".ui.MPINActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.TPINActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.ConfirmationActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.ConfirmationUI" android:screenOrientation="portrait" />
+        <activity android:name=".ui.DeleteUI" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.CustomerCareDetails" android:screenOrientation="portrait" />
+        <activity android:name=".prelogin.CustomerCareDetailsGroup" android:screenOrientation="portrait" />
+        <receiver android:name=".reciever.MyAlarm" />
+    </application>
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+</manifest>

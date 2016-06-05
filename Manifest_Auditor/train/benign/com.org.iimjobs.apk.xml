@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="4" android:versionName="2.0.2" package="com.org.iimjobs"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name="IIMJobsApplication" android:allowBackup="true" android:logo="@drawable/actionbar_icon">
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="@string/app_name" android:name="com.org.iimjobs.SplashActivty" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="AuthorizationActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.AppCompat.Light" android:name="MainActivity" android:screenOrientation="portrait" android:logo="@drawable/actionbar_icon" />
+        <activity android:theme="@style/Theme.AppCompat.Light" android:name="SignInActivity" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.org.iimjobs.AuthorizationActivity" />
+        </activity>
+        <activity android:theme="@style/Theme.AppCompat.Light" android:label="@string/label_job_details" android:name="JobDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/label_personal_info" android:name="PersonalInfoActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="PopupActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/number_picker_dialog" android:name="NumberPickerActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.AppCompat.Light" android:name="JobListingActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/label_companies_list" android:name="CompaniesListActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme" android:label="@string/main_connect_title" android:name="ConnectWithActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme" android:name="AboutActivity" android:screenOrientation="portrait" />
+        <service android:name="UpdateService" />
+        <service android:name="CompanyService" />
+        <provider android:name="com.org.iimjobs.providers.IIMContentProvider" android:exported="false" android:authorities="com.org.iimjobs.provider" />
+        <receiver android:name="AlarmReciever" />
+        <service android:name="ParseService" />
+    </application>
+</manifest>

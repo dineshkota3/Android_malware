@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="12" android:versionName="2.5" android:installLocation="auto" package="com.net.pvr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:largeScreens="true" android:xlargeScreens="true" />
+    <application android:theme="@*android:style/Theme.NoTitleBar" android:label="@string/app_name" android:icon="@drawable/app_icon" android:name="com.pvr.application.PvrApplication">
+        <uses-library android:name="com.google.android.maps" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.SplashActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.TestActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.HomeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.ActivaionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.LoginActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.MoreOptionsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.ChooseCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.SocialConnectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.StaticContentwebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.PreferencesActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.MoviePreferenceActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Almost_full_transparent" android:name="com.pvr.ui.activity.GenreListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.FeedbackActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.MoviesActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.MoviesListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.MovieDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.DealsListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.TracingLocationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.DealsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.DealsHowAndTncActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.CinemaListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.MakePaymentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.CinemaDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.PvrMapActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.NotificationListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.FavoriteActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.FavoriteListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.PvrExclusiveActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.ExclusiveGiftPurchaseFormActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.ExclusiveGiftDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.CancelTicketActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.pvr.ui.activity.BarcodeReader" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" android:screenOrientation="portrait" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:name="com.google.zxing.client.android.CaptureActivity" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="zxing.appspot.com" android:path="/scan" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="www.google.com" android:path="/m/products/scan" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="www.google.co.uk" android:path="/m/products/scan" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.BuyTicketActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.SeatClassAndCountActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.ChangeSeatActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.ThankYouActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.ConfirmationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.FnbActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.SeatPlanActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.CollageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.WebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.WatchTrailer" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.LocationConfirmationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.PreBookTicketActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.CinemaBookingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.GiftCardActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.MCouponActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.PromoCodeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.inmobi.androidsdk.IMBrowserActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.MovieMoreActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.BookingHistoryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.BookingHistoryDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.ExclusiveWebViewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.AboutAppActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name="com.pvr.ui.activity.PreMovieHomeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.pvr.ui.activity.PushConfirmationDailog" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <service android:name="com.pvr.services.LocationUpdateService" />
+        <service android:name="com.pvr.services.LocalService" />
+        <service android:name="com.net.pvr.GCMIntentService" />
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.net.pvr" />
+            </intent-filter>
+        </receiver>
+    </application>
+    <permission android:name="com.net.pvr.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.net.pvr.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.network" />
+    <uses-feature android:name="android.hardware.location" />
+    <uses-feature android:name="android.hardware.location.gps" />
+</manifest>

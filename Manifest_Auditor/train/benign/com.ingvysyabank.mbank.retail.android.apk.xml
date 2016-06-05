@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="4" android:versionName="1.2" package="com.ingvysyabank.mbank.retail.android"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <permission android:name="com.ingvysyabank.mbank.retail.android.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
+    <permission android:name="com.ingvysyabank.mbank.retail.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true" />
+    <uses-permission android:name="com.ingvysyabank.mbank.retail.android.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.ingvysyabank.mbank.retail.android.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-feature android:glEsVersion="0x20000" android:required="true" />
+    <application android:theme="@style/INGActionBarTheme" android:label="@string/app_name" android:icon="@drawable/app_icon" android:name="com.ingvysyabank.mbank.retail.android.INGApplication" android:allowBackup="true">
+        <uses-library android:name="com.google.android.maps" />
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+        <receiver android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDHZBrtahBJ0HGxZ099HMmrs0xDKARk4dw" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.ingvysyabank.mbank.retail.android.view.SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.ingvysyabank.mbank.retail.android.view.SplashActivity.NOTIFICATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.HomeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.AccountInformationActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.ingvysyabank.mbank.retail.android.view.ShowPickerActivity" />
+        <activity android:theme="@style/Theme.Transparent" android:name="com.ingvysyabank.mbank.retail.android.view.CustomPicker" />
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.LoginPasswordActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.DebitCardInformationActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.DebitCardInformationActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.DebitCardInformationActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.TransactionPasswordActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.LoginPasswordActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.LoginPasswordActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.OTACActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.AddBeneficiaryActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.AddBeneficiaryActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.MessageAndMoreActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.SettingsMainActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MessageAndMoreActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MessageAndMoreActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.ChangeNicknameActivity" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.SettingsMainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.SettingsMainActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.ChangePasswordActivity" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.SettingsMainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.SettingsMainActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.LicenceActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.MyAccountDepositActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.OpenNewFDActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MyAccountDepositActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.OpenNewRDActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MyAccountDepositActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.RecentTransactionActivity" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MyAccountDepositActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MyAccountDepositActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.RegistrationSuccessActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.AddBeneficiaryActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.BeneficiaryListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.BeneficiaryListActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.EditBeneficiaryActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.BeneficiaryListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.BeneficiaryListActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.BeneficiaryListActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.FundTransferHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.FundTransferHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.BeneficiaryDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.AddBeneficiaryActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.AddBeneficiaryActivity" />
+        </activity>
+        <activity android:icon="@drawable/icon_accounts_deposits_normal" android:name="com.ingvysyabank.mbank.retail.android.view.DepositDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MyAccountDepositActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MyAccountDepositActivity" />
+        </activity>
+        <activity android:icon="@drawable/icon_accounts_deposits_normal" android:name="com.ingvysyabank.mbank.retail.android.view.NewDepositConfirmActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MyAccountDepositActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MyAccountDepositActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.IFSCSearchActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.AddBeneficiaryActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.AddBeneficiaryActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.IFSCSearchList" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.IFSCSearchActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.IFSCSearchActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.FundTransferHomeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.FundTransferConfirmActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.FundTransferHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.FundTransferHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.MyChequeBookActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:name="com.ingvysyabank.mbank.retail.android.view.CameraActivity" android:launchMode="singleTop" android:screenOrientation="landscape" />
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.ChequeBookRequestActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MyChequeBookActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MyChequeBookActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.StopChequeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MyChequeBookActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MyChequeBookActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.StoreChequeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MyChequeBookActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MyChequeBookActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.PrepareRequestTokenActivity" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="x-oauthflow-twitter" android:host="callback" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.FavouriteAccount" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.BillPayNowActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.BillPaymentConfirm" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.BillPayNowActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.BillPayNowActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.InstantBillPayHomeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.InstantBillPayDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.InstantBillPayHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.InstantBillPayHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.InstantBillPayConfirmActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.InstantBillPayDetailsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.InstantBillPayDetailsActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.InstantBillPayPasswordActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.InstantBillPayDetailsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.InstantBillPayDetailsActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.MobileRechargeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.INGDealsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.FundsHistory" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.FundTransferHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.FundTransferHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.GiftVoucherActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.VoucherPreview" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.GiftVoucherActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.GiftVoucherActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.VoucherDetails" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.VoucherPreview">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.VoucherPreview" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.VoucherConfirmation" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.VoucherDetails">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.VoucherDetails" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.ShoppingHistory" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.RechargeConfirmationAcitivty" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.DTHRechargeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.ShoppingHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.ManageBillerActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.EditBillerActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.OpenANewAccountActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MessageAndMoreActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MessageAndMoreActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.WealthAndLoansActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.CategoryListActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.LoansActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.WealthAndLoansActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.WealthAndLoansActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.LoanAccountDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.LoansActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.LoansActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.InvestmentsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.WealthAndLoansActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.WealthAndLoansActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.MutualFundsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.InvestmentsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.InvestmentsActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.InvPortfolioSummaryActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MutualFundsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MutualFundsActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.InvPortfolioDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.InvPortfolioSummaryActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.InvPortfolioSummaryActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.SIPsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.InvestmentsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.InvestmentsActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.SIPDetailActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.SIPsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.SIPsActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.DematAccountsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.WealthAndLoansActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.WealthAndLoansActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.DematPortfolioActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.DematAccountsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.DematAccountsActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.DematTransactionsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.DematPortfolioActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.DematPortfolioActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.BillerPaymentHistory" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.BillPaymentHomeActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.BillerPaymentHistoryDetails" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.BillerPaymentHistory">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.BillerPaymentHistory" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.CloseFixedDepositActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.DepositDetailsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.DepositDetailsActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.CloseFDConfirmActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.CloseFixedDepositActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.CloseFixedDepositActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.MyGiftVoucher" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MessageAndMoreActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MessageAndMoreActivity" />
+        </activity>
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.RegistrationOTACActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.ingvysyabank.mbank.retail.android.view.MessageListActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="com.ingvysyabank.mbank.retail.android.view.MessageAndMoreActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.ingvysyabank.mbank.retail.android.view.MessageAndMoreActivity" />
+        </activity>
+        <activity android:name="com.worklight.wlclient.ui.UIActivity" />
+        <service android:name="com.ingvysyabank.mbank.retail.android.services.INGGCMIntentService" />
+        <receiver android:name="com.ingvysyabank.mbank.retail.android.services.INGGCMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.ingvysyabank.mbank.retail.android" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.ingvysyabank.mbank.retail.android" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

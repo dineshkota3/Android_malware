@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="3" android:versionName="1.2" android:installLocation="auto" package="com.bt.inx"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:label="INOX" android:icon="@drawable/icon">
+        <activity android:name=".activity.SplashActivity" android:finishOnTaskLaunch="true" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name=".activity.SubRegionListActivity" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name=".activity.MovieListActivity" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name=".activity.ShowtimesActivity" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name=".activity.ShowDatesActivity" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name=".activity.VenueTimesActivity" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name=".activity.CategoryActivity" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name=".activity.SeatLayoutActivity" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name=".activity.ShowInfoActivity" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name=".activity.AboutUsActivity" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name=".activity.HelpActivity" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name=".activity.BookingHistoryActivity" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Black.NoTitleBar" android:name=".activity.PaymentActivity" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name=".activity.BHistoryViewActivity" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" />
+</manifest>

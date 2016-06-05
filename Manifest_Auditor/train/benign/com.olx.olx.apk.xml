@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="338" android:versionName="3.3.8" package="com.olx.olx"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.olx.olx.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:name="com.olx.olx.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <application android:theme="@style/CustomTheme" android:label="@string/app_name" android:icon="@drawable/olx_icon" android:name="com.olx.olx.activity.OlxApplication" android:allowBackup="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+        <service android:name=".push.OlxC2DMReceiverService" />
+        <service android:name=".push.NotificationDeletionService" />
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+        <receiver android:name="com.olx.olx.receiver.InMobiBroadcastReceiver" android:exported="true" />
+        <receiver android:name="com.AdX.tag.AdXAppTracker" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+            <meta-data android:name="ADX_FORWARD_REFERRAL.InMobi" android:value="com.olx.olx.receiver.InMobiBroadcastReceiver" />
+            <meta-data android:name="ADX_FORWARD_REFERRAL.GoogleAnalytics" android:value="com.google.analytics.tracking.android.CampaignTrackingReceiver" />
+            <meta-data android:name="ADX_FORWARD_REFERRAL.TradeMob" android:value="com.trademob.tracking.environment.TMInstallBroadcastReceiver" />
+            <meta-data android:name="ADX_FORWARD_REFERRAL.Jampp" android:value="com.mobileapptracker.Tracker" />
+            <meta-data android:name="ADX_FORWARD_REFERRAL.Vserv" android:value="mobi.vserv.android.trackingengine.VservInstallReceiver" />
+            <meta-data android:name="ADX_FORWARD_REFERRAL.Appconversion" android:value="com.track.conversion.TrackingReceiver" />
+        </receiver>
+        <meta-data android:name="APP_NAME" android:value="com.olx.olx" />
+        <meta-data android:name="ADX_CLIENT_ID" android:value="olxinc789048jo" />
+        <receiver android:name=".push.OlxC2DMBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.olx.olx" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.olx.olx" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".activity.Olx" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ChooseCountry" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name=".activity.DetailsMapActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name=".activity.AroundMeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.OlxActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.Main" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ChooseState" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ChooseCity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ChooseFilters" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SubcategoryList" android:screenOrientation="portrait" />
+        <activity android:name=".activity.post.Post_ad" android:screenOrientation="portrait" />
+        <activity android:name=".activity.post.ChooseLocation" android:screenOrientation="portrait" />
+        <activity android:name=".activity.post.CameraView" />
+        <activity android:name=".activity.post.ChooseCategory" android:screenOrientation="portrait" />
+        <activity android:name=".activity.post.Description" android:screenOrientation="portrait" />
+        <activity android:name=".activity.post.Congratulations" android:screenOrientation="portrait" />
+        <activity android:name=".activity.post.PutOnMap" android:screenOrientation="portrait" />
+        <activity android:name=".activity.post.AddVideo" android:screenOrientation="portrait" />
+        <activity android:name=".activity.Listings" android:screenOrientation="portrait" />
+        <activity android:name=".activity.signin.SignIn" android:screenOrientation="portrait" />
+        <activity android:name=".activity.signin.Register" android:screenOrientation="portrait" />
+        <activity android:name=".activity.item.Details" android:screenOrientation="portrait" />
+        <activity android:name=".activity.item.Reply" android:screenOrientation="portrait" />
+        <activity android:name=".activity.item.Comments" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.ViewPagerMyOlx" android:name=".activity.signin.Profile" android:screenOrientation="portrait" />
+        <activity android:name=".activity.item.AddComment" android:screenOrientation="portrait" />
+        <activity android:name=".activity.signin.ForgotPassword" android:screenOrientation="portrait" />
+        <activity android:name=".activity.signin.Settings" android:screenOrientation="portrait" />
+        <activity android:name=".activity.signin.ManageComments" android:screenOrientation="portrait" />
+        <activity android:name=".activity.signin.Mailbox" android:screenOrientation="portrait" />
+        <activity android:name=".activity.signin.PreviewMessage" android:screenOrientation="portrait" />
+        <activity android:name=".activity.signin.ReplyMessage" android:screenOrientation="portrait" />
+        <activity android:name=".activity.signin.Language" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:name=".activity.item.ImagesPreview" android:screenOrientation="portrait" />
+        <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity android:name="com.inmobi.adtracker.androidsdk.IMAdTrackerOverlayActivity">
+            <intent-filter>
+                <data android:scheme="sdt-15f41129-bee1-4a08-98f6-10d5a25f150a" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".test.FacebookOlx" android:screenOrientation="portrait" />
+        <activity android:name=".activity.social.WebViewActivity" />
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity android:name=".activity.NoUserSettings" android:screenOrientation="portrait" />
+        <uses-library android:name="com.google.android.maps" android:required="false" />
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="ddfa1c1028b5cdcb53d3ca209cae526ee7634f1d" />
+    </application>
+</manifest>

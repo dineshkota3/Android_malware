@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="28" android:versionName="3.9.1" android:installLocation="auto" package="com.bt.bms"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <permission android:name="com.bt.bms.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.bt.bms.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-feature android:name="android.hardware.location" android:required="true" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-feature android:name="android.hardware.location.network" android:required="false" />
+    <permission android:name="com.bt.bms.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.bt.bms.permission.C2D_MESSAGE" />
+    <uses-feature android:glEsVersion="0x20000" android:required="true" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/bms_logo" android:name="com.bt.bms.BMSApplication" android:allowTaskReparenting="true" android:allowBackup="true">
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.SplashActivity" android:clearTaskOnLaunch="false" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.MainTabActivity" android:clearTaskOnLaunch="false" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:alwaysRetainTaskState="true" android:windowSoftInputMode="adjustNothing" />
+        <activity android:label="@string/title_activity_intro" android:name="com.bt.bms.activities.IntroActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.LoginOptionsActivity" android:screenOrientation="portrait">
+            <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.LoginActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.ForgotPasswordActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.SignUpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.PromptMobileActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity android:label="@string/title_activity_region_list" android:name="com.bt.bms.activities.RegionListActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_region_list" android:name="com.bt.bms.activities.SubRegionListActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.facebook.LoginActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_tickets_fragment" android:name="com.bt.bms.activities.TicketsFragmentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/title_activity_you_fragment" android:name="com.bt.bms.activities.YouFragmentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/Theme.PageIndicatorDefaults" android:label="@string/app_name" android:name="com.bt.bms.activities.ShowTimesActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/title_activity_dicover_fragment" android:name="com.bt.bms.activities.DiscoverFragmentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/title_activity_dicover_fragment" android:name="com.bt.bms.activities.BrowserActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/title_activity_dicover_fragment" android:name="com.bt.bms.activities.WebEventActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="bms" android:host="bookmyshow.com" android:path="/loadwebeventdetails/" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/bookmyshow" android:name="com.bt.bms.activities.ShowTimeSelectionActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/bookmyshow" android:name="com.bt.bms.activities.EventTimeSelectionActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/bookmyshow" android:name="com.bt.bms.activities.DateTimeSelectionActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_show_time_selection" android:name="com.bt.bms.activities.QuantitySelectionActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_show_time_selection" android:name="com.bt.bms.activities.SeatLayoutActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_order_summary" android:name="com.bt.bms.activities.OrderSummaryActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="bms" android:host="bookmyshow.com" android:path="/loadPaymentoptions/" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_tickets_fragment" android:name="com.bt.bms.activities.EventDetailsFragmentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="bms" android:host="bookmyshow.com" android:path="/loadeventdetails/" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_order_summary" android:name="com.bt.bms.activities.CreditCardActivity" android:screenOrientation="portrait" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCPTv8Kwt0YoWFG7w6zpDZTQH7p_5wyJ_I" />
+        <activity android:label="@string/title_activity_payment_options" android:name="com.bt.bms.activities.PaymentOptionsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:label="@string/title_activity_payment_options" android:name="com.bt.bms.activities.ConfirmDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_payment_options" android:name="com.bt.bms.activities.OffersActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.AddContactsActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.ContactListActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.NetBankingActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_payment_form" android:name="com.bt.bms.activities.PaymentFormActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/title_activity_payment_form" android:name="com.bt.bms.activities.SubPayOptionsActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_payment_form" android:name="com.bt.bms.activities.WebPaymentActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.AllDoneActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.OrderInfoActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.BookingDetailActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.VenueMapActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.PurchaseHistoryActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.TicketDetailActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.FriendListActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.FavoriteVenueListActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_show_details" android:name="com.bt.bms.activities.ShowDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.VenueDetailMapActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.EventListActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.SettingsActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.VenueListActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.QuikpayListActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.AddEditQuikpayActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.AddNetBankingActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="com.bt.bms.activities.RewardsActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/title_activity_change_password" android:name="com.bt.bms.activities.ChangePasswordActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.Transparent" android:label="@string/title_activity_change_password" android:name="com.bt.bms.activities.EditProfileActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+        <receiver android:name="com.bt.bms.InstallReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.bt.bms.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.bt.bms" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.bt.bms.GcmIntentService" />
+        <receiver android:name="com.bt.bms.TicketNotificationAlarmReceiver">
+            <intent-filter>
+                <data android:scheme="timer:" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.bt.bms.TicketAlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="affleInAppPostBackURL" android:value="http://ad2campaign.co/bookmyshow/bmsandroidapp/inapptracker.php?ad2cid=176@ad2c@" />
+        <meta-data android:name="affleDownloadPostBackURL" android:value="http://ad2campaign.co/bookmyshow/bmsandroidapp/dl_android.php?ad2cid=176@ad2c@" />
+    </application>
+</manifest>

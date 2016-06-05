@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="2" android:versionName="1.1" package="cinepolis.ticketnew.android.ui"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application android:theme="@*android:style/Theme.Black.NoTitleBar" android:label="@string/app_name" android:icon="@drawable/icon" android:name="cinepolis.ticketnew.android.ui.TicketNewApplication" android:allowClearUserData="false" android:debuggable="false" android:allowBackup="false">
+        <activity android:label="@string/app_name" android:name="cinepolis.ticketnew.android.ui.SplashScreenActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cinepolis.ticketnew.android.ui.MasterActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.CustomMenuActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.TheatreListActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.CityListActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.StateListActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.MovieListActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.ScheduleDatesActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.MovieScheduleActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.TheatreClassSelectionActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.SeatLayoutActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.UserLoginActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.BookingInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.PaymentProcessActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.HelpActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.AboutActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.PaymentGatewayActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.PGConfirmActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.RegistrationActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.LastTransactionActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.ConfirmationDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.TicketNewActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.ContactActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.AutoSeatBookingInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.SelectTicketCountActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.LevelMessageActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.MoviesActivity" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.MoviewiseSchedule" android:screenOrientation="portrait" />
+        <activity android:name="cinepolis.ticketnew.android.ui.PGBankActivity" android:screenOrientation="portrait" />
+    </application>
+</manifest>

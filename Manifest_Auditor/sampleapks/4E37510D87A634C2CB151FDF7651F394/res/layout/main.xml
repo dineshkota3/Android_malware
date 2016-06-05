@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/mainLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/white" android:layout_gravity="fill_vertical" android:id="@id/textView" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/firstActivityLoading" android:layout_weight="150.0" android:inputType="textMultiLine" android:fadeScrollbars="false">	>
+<requestFocus />
+    </TextView>
+    <LinearLayout android:gravity="center" android:id="@id/textViewExitContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/blue" android:id="@id/textViewExit" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Exit" android:onClick="onExitClicked" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@android:style/ButtonBar">
+        <Button android:id="@id/firstScreenRulesButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/firstActivityRules" android:layout_weight="1.0" android:onClick="onRulesClicked" />
+        <Button android:id="@id/firstScreenAcceptButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/firstActivityNext" android:layout_weight="1.0" android:onClick="onNextClicked" />
+    </LinearLayout>
+</LinearLayout>

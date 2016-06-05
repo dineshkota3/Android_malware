@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="6" android:versionName="1.017" package="com.hungama.imh"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <permission android:name="com.hungama.imh.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.hungama.imh.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <application android:theme="@style/AppTheme" android:label="@string/application_name" android:icon="@drawable/icon_launcher" android:name="com.hungama.myplay.activity.ui.HungamaApplication" android:debuggable="false">
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.OnApplicationStartsActivity" android:screenOrientation="sensorPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="@string/activity_label_login" android:name="com.hungama.myplay.activity.ui.SplashScreenActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:label="@string/activity_label_login" android:name="com.hungama.myplay.activity.ui.LoginActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.UpgradeActivity" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.DownloadConnectingActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.DownloadActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.MyPreferencesActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.RedeemActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:label="@string/main_actionbar_title_music" android:name="com.hungama.myplay.activity.ui.HomeActivity" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/main_actionbar_title_discover" android:name="com.hungama.myplay.activity.ui.DiscoveryActivity" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/main_actionbar_title_music" android:name="com.hungama.myplay.activity.ui.MediaDetailsActivity" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/main_actionbar_title_videos" android:name="com.hungama.myplay.activity.ui.VideoCategoriesActivity" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:label="@string/main_actionbar_title_videos" android:name="com.hungama.myplay.activity.ui.VideoActivity" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.AppTourActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:theme="@style/AppTheme.Translucent" android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.AppGuideActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:theme="@style/AppTheme.Translucent" android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.BadgesAndCoinsActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:theme="@style/Theme.Translucent.NoActionBar" android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.PushNotificationActivity" android:launchMode="singleTop" android:screenOrientation="sensorPortrait" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.hungama.myplay.activity.network.NetworkDialog" android:screenOrientation="sensorPortrait" />
+        <activity android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.FavoritesActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.CommentsActivity" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:label="@string/application_name" android:name="com.hungama.myplay.activity.ui.MyCollectionActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/main_actionbar_title_radio" android:name="com.hungama.myplay.activity.ui.RadioActivity" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.hungama.myplay.activity.campaigns.ForYouActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.hungama.myplay.activity.campaigns.VideoViewActivity" android:screenOrientation="sensorLandscape" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.hungama.myplay.activity.campaigns.ImageDetailActivity" />
+        <activity android:theme="@style/Theme.Sherlock" android:name="com.hungama.myplay.activity.ui.ProfileActivity" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.hungama.myplay.activity.ui.PlaylistsActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:theme="@style/AppTheme.Field.NoActionBar" android:name="com.hungama.myplay.activity.ui.FeedbackActivity" android:screenOrientation="sensorPortrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:theme="@style/AppTheme.Field.NoActionBar" android:name="com.hungama.myplay.activity.ui.HelpAndFAQActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:theme="@style/AppTheme.Field.NoActionBar" android:name="com.hungama.myplay.activity.ui.AboutActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:name="com.hungama.myplay.activity.gigya.InviteFriendsActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:theme="@style/AppTheme.Field.NoActionBar" android:name="com.hungama.myplay.activity.gigya.TwitterLoginActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.hungama.myplay.activity.ui.SettingsActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.hungama.myplay.activity.ui.PlacementSplashActivity" android:screenOrientation="sensorPortrait" />
+        <activity android:name="com.gigya.socialize.android.GSWebViewActivity" android:screenOrientation="sensorPortrait" />
+        <service android:name="com.hungama.myplay_imh.activity.services.GCMRegistrationService" android:enabled="true" android:exported="false" />
+        <service android:name="com.hungama.myplay_imh.activity.services.SubscriptionService" android:enabled="true" android:exported="false" />
+        <service android:name="com.hungama.myplay_imh.activity.services.MoodPrefetchingService" android:enabled="true" android:exported="false" />
+        <service android:name="com.hungama.myplay_imh.activity.services.CampaignsPreferchingService" android:enabled="true" android:exported="false" />
+        <service android:name="com.hungama.myplay.activity.player.PlayerService" android:enabled="true" android:exported="false" />
+        <service android:name="com.hungama.myplay_imh.activity.services.DownloadFileService" android:enabled="true" android:exported="false" />
+        <service android:name="com.hungama.myplay_imh.activity.services.InventoryLightService" android:enabled="true" android:exported="false" />
+        <service android:name="com.hungama.myplay_imh.activity.services.ServerCommandsService" android:enabled="true" android:exported="false" />
+        <receiver android:name="com.hungama.myplay_imh.activity.gcm.GCMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.hungama.myplay_imh.activity" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.hungama.myplay_imh.activity.gcm.GCMIntentService" />
+        <meta-data android:name="APP_NAME" android:value="@string/adx_app_name" />
+        <meta-data android:name="ADX_CLIENT_ID" android:value="@string/adx_client_id" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/gigya_facebook_application_id" />
+    </application>
+</manifest>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="scrollView1">false</item>
+    <item type="id" name="InnerRelativeLayout">false</item>
+    <item type="id" name="linearLayout2">false</item>
+    <item type="id" name="textView2">false</item>
+    <item type="id" name="checkBox1">false</item>
+    <item type="id" name="checkBox2">false</item>
+    <item type="id" name="checkBox3">false</item>
+    <item type="id" name="checkBox4">false</item>
+    <item type="id" name="checkBox5">false</item>
+    <item type="id" name="textView7">false</item>
+    <item type="id" name="textView6">false</item>
+    <item type="id" name="checkBox7">false</item>
+    <item type="id" name="checkBox8">false</item>
+    <item type="id" name="checkBox9">false</item>
+    <item type="id" name="checkBox10">false</item>
+    <item type="id" name="Button">false</item>
+    <item type="id" name="rlChannel">false</item>
+    <item type="id" name="ivImage">false</item>
+    <item type="id" name="llTitle">false</item>
+    <item type="id" name="tvTitle">false</item>
+    <item type="id" name="tvDesc">false</item>
+</resources>

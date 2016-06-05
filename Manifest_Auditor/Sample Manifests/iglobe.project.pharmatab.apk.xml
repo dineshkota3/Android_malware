@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="4" android:versionName="1.4" package="iglobe.project.pharmatab"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="iglobe.project.pharmatab.permission.C2D_MESSAGE" />
+    <permission android:name="iglobe.project.pharmatab.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <application android:theme="@*android:style/Theme.Black.NoTitleBar.Fullscreen" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:allowBackup="true">
+        <activity android:label="@string/app_name" android:name="iglobe.project.pharmatab.SplashScreen" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="iglobe.project.pharmatab.PharmaTab" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="iglobe.project.pharmatab.ShowCategory" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="iglobe.project.pharmatab.MuPDFActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="iglobe.project.pharmatab.Settings" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="iglobe.project.pharmatab.UserForm" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="iglobe.project.pharmatab.ShowMedia" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.artifex.mupdfdemo.PrintDialogActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.artifex.mupdfdemo.OutlineActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="iglobe.project.pharmatab" />
+            </intent-filter>
+        </receiver>
+        <service android:name="iglobe.project.pharmatab.GCMIntentService" />
+    </application>
+</manifest>

@@ -1,0 +1,2196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="24" android:versionName="3.4" package="com.csam.icici.bank.imobile"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" />
+    <application android:label="@string/midletName" android:icon="@drawable/applogo" android:name="ICICIBank">
+        <activity android:name="ICICIActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SuccessMessageScreen">
+            <intent-filter>
+                <action android:name="successmessagescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ApplyNowForCreditCardScreen">
+            <intent-filter>
+                <action android:name="applynowforcreditcardscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ApplyNowForBankAccountScreen">
+            <intent-filter>
+                <action android:name="applynowforbankaccountscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ApplyNowScreen">
+            <intent-filter>
+                <action android:name="applynowscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ApplyForDematScreen">
+            <intent-filter>
+                <action android:name="applyfordematscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ApplyForLoanScreen">
+            <intent-filter>
+                <action android:name="applyforloanscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Preactivationscreen">
+            <intent-filter>
+                <action android:name="preactivationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LocateUsScreen">
+            <intent-filter>
+                <action android:name="locateusscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="RegionListScreen">
+            <intent-filter>
+                <action android:name="regionlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PhoneBankingInfoScreen">
+            <intent-filter>
+                <action android:name="phonebankinginfoscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ATMAddrScreen">
+            <intent-filter>
+                <action android:name="atmaddrscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FindATMScreen">
+            <intent-filter>
+                <action android:name="findatmscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BranchAddrScreen">
+            <intent-filter>
+                <action android:name="branchaddrscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FindBranchScreen">
+            <intent-filter>
+                <action android:name="findbranchscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CreatePINScreen" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="createpinscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SyncOrSkipScreen">
+            <intent-filter>
+                <action android:name="syncorskipscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MainScreen">
+            <intent-filter>
+                <action android:name="mainscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ShowSyncSummary">
+            <intent-filter>
+                <action android:name="showsyncsummary" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ServiceDescriptionScreen">
+            <intent-filter>
+                <action android:name="servicedescriptionscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TelcoProviderListScreen">
+            <intent-filter>
+                <action android:name="telcoproviderlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="WMATelcoProviderListScreen">
+            <intent-filter>
+                <action android:name="wmatelcoproviderlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ReceiptListScreen">
+            <intent-filter>
+                <action android:name="receiptlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ReceiptDetailScreen">
+            <intent-filter>
+                <action android:name="receiptdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MainMore">
+            <intent-filter>
+                <action android:name="mainmore" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ChangePINScreen" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="changepinscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MessageScreenBack">
+            <intent-filter>
+                <action android:name="messagescreenback" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SuccessfulMessageScreen">
+            <intent-filter>
+                <action android:name="successfulmessagescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TerminateWalletScreen">
+            <intent-filter>
+                <action android:name="terminatewalletscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TerminateSuccessfulScreen">
+            <intent-filter>
+                <action android:name="terminatesuccessfulscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="HelpListScreen">
+            <intent-filter>
+                <action android:name="helplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="HelpListScreenServicehelp">
+            <intent-filter>
+                <action android:name="helplistscreenservicehelp" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="HelpListScreenMain">
+            <intent-filter>
+                <action android:name="helplistscreenmain" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="HelpDetailScreen">
+            <intent-filter>
+                <action android:name="helpdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="UpgradeScreen">
+            <intent-filter>
+                <action android:name="upgradescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="UpgradeMessageScreen">
+            <intent-filter>
+                <action android:name="upgrademessagescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LoginScreen" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="loginscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TempLoginScreen">
+            <intent-filter>
+                <action android:name="temploginscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="AboutScreen">
+            <intent-filter>
+                <action android:name="aboutscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ProgressBarScreen">
+            <intent-filter>
+                <action android:name="progressbarscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CancelWarningScreen">
+            <intent-filter>
+                <action android:name="cancelwarningscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pcw">
+            <intent-filter>
+                <action android:name="pcw" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LockScreen">
+            <intent-filter>
+                <action android:name="lockscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="UnlockScreen" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="unlockscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="NotAvailableScreen">
+            <intent-filter>
+                <action android:name="notavailablescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PendingScreen">
+            <intent-filter>
+                <action android:name="pendingscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="WarningPendingScreen">
+            <intent-filter>
+                <action android:name="warningpendingscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ViewAlerts">
+            <intent-filter>
+                <action android:name="viewalerts" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ReferAFriendScreen">
+            <intent-filter>
+                <action android:name="referafriendscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ReferAFriendResponseScreen">
+            <intent-filter>
+                <action android:name="referafriendresponsescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ICICICommsConfigurationScreen">
+            <intent-filter>
+                <action android:name="icicicommsconfigurationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="GprsCommunicationScreen">
+            <intent-filter>
+                <action android:name="gprscommunicationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SMSChargeInfoMessageScreen">
+            <intent-filter>
+                <action android:name="smschargeinfomessagescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CommsConfigurationScreen">
+            <intent-filter>
+                <action android:name="commsconfigurationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SFAInputScreen">
+            <intent-filter>
+                <action android:name="sfainputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SFACreditCardListScreen">
+            <intent-filter>
+                <action android:name="sfacreditcardlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SfaconfirmationScreen">
+            <intent-filter>
+                <action android:name="sfaconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FtTransactionDenyScreen">
+            <intent-filter>
+                <action android:name="fttransactiondenyscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservCardListScreen">
+            <intent-filter>
+                <action android:name="iservcardlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SecurityTipScreen">
+            <intent-filter>
+                <action android:name="securitytipscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CreditCardListScreen">
+            <intent-filter>
+                <action android:name="creditcardlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CreditServiceListScreen">
+            <intent-filter>
+                <action android:name="creditservicelistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CreditHelpListScreen">
+            <intent-filter>
+                <action android:name="credithelplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CreditInfoScreen">
+            <intent-filter>
+                <action android:name="creditinfoscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="OtheraccountIconScreen">
+            <intent-filter>
+                <action android:name="otheraccounticonscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematDoctypeAndSlipno">
+            <intent-filter>
+                <action android:name="dematdoctypeandslipno" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematScripNameMandatory">
+            <intent-filter>
+                <action android:name="dematscripnamemandatory" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematScripName">
+            <intent-filter>
+                <action android:name="dematscripname" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematServicesScreen">
+            <intent-filter>
+                <action android:name="dematservicesscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematAccountListScreen">
+            <intent-filter>
+                <action android:name="demataccountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematQueryScreen">
+            <intent-filter>
+                <action android:name="dematqueryscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematHoldingDisclaimerScreen">
+            <intent-filter>
+                <action android:name="dematholdingdisclaimerscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematFlScripListScreen">
+            <intent-filter>
+                <action android:name="dematflscriplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematFirstScripListScreen">
+            <intent-filter>
+                <action android:name="dematfirstscriplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematMediumScripListScreen">
+            <intent-filter>
+                <action android:name="dematmediumscriplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematLastScripListScreen">
+            <intent-filter>
+                <action android:name="dematlastscriplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DematHelpListScreen">
+            <intent-filter>
+                <action android:name="demathelplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LoanDisclaimerScreen1">
+            <intent-filter>
+                <action android:name="loandisclaimerscreen1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LoanDisclaimerScreen2">
+            <intent-filter>
+                <action android:name="loandisclaimerscreen2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LoanDisclaimerScreen3">
+            <intent-filter>
+                <action android:name="loandisclaimerscreen3" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LoanDisclaimerScreen4">
+            <intent-filter>
+                <action android:name="loandisclaimerscreen4" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LoanDisclaimerScreen5">
+            <intent-filter>
+                <action android:name="loandisclaimerscreen5" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LoanServicesScreen">
+            <intent-filter>
+                <action android:name="loanservicesscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LoanAccountListScreen">
+            <intent-filter>
+                <action android:name="loanaccountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LoanMessageScreen">
+            <intent-filter>
+                <action android:name="loanmessagescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LoanHelpListScreen">
+            <intent-filter>
+                <action android:name="loanhelplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="OutstandingAmountScreen">
+            <intent-filter>
+                <action android:name="outstandingamountscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MshopIconScreen">
+            <intent-filter>
+                <action android:name="mshopiconscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MshopHelpListScreen">
+            <intent-filter>
+                <action android:name="mshophelplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MoreServices">
+            <intent-filter>
+                <action android:name="moreservices" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CardListScreen">
+            <intent-filter>
+                <action android:name="cardlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PayeeListScreen">
+            <intent-filter>
+                <action android:name="payeelistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BankServiceListScreen">
+            <intent-filter>
+                <action android:name="bankservicelistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BankHelpListScreen">
+            <intent-filter>
+                <action android:name="bankhelplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LastNTransactionScreen">
+            <intent-filter>
+                <action android:name="lastntransactionscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BankFundTransfer">
+            <intent-filter>
+                <action android:name="bankfundtransfer" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FTOwnBankAccount">
+            <intent-filter>
+                <action android:name="ftownbankaccount" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FtOwnAccountAmountScreen">
+            <intent-filter>
+                <action android:name="ftownaccountamountscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FtOwnAccountConfirmationScreen">
+            <intent-filter>
+                <action android:name="ftownaccountconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PinNumberSFAConfirmationScreen">
+            <intent-filter>
+                <action android:name="pinnumbersfaconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FtOtherAccountAmountScreen">
+            <intent-filter>
+                <action android:name="ftotheraccountamountscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FtOutsideBankAmountScreen">
+            <intent-filter>
+                <action android:name="ftoutsidebankamountscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BankConfirmationScreen">
+            <intent-filter>
+                <action android:name="bankconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CardNumberSFAConfirmationScreen">
+            <intent-filter>
+                <action android:name="cardnumbersfaconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ChequeBookConfirmAction">
+            <intent-filter>
+                <action android:name="chequebookconfirmaction" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ChequeStatusScreen">
+            <intent-filter>
+                <action android:name="chequestatusscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ChequeStopScreen">
+            <intent-filter>
+                <action android:name="chequestopscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BankInfoScreen">
+            <intent-filter>
+                <action android:name="bankinfoscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BankBalanceInfoScreen">
+            <intent-filter>
+                <action android:name="bankbalanceinfoscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BillServicesScreen">
+            <intent-filter>
+                <action android:name="billservicesscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BillpayHelpListScreen">
+            <intent-filter>
+                <action android:name="billpayhelplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BillsListScreen">
+            <intent-filter>
+                <action android:name="billslistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BillParamScreen">
+            <intent-filter>
+                <action android:name="billparamscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BillpayConfirmationScreen">
+            <intent-filter>
+                <action android:name="billpayconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="AccountListScreen">
+            <intent-filter>
+                <action android:name="accountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PaymentBillsListScreen">
+            <intent-filter>
+                <action android:name="paymentbillslistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BillpayAccountListScreen">
+            <intent-filter>
+                <action android:name="billpayaccountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BillAmountScreen">
+            <intent-filter>
+                <action android:name="billamountscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MshopIconScreen">
+            <intent-filter>
+                <action android:name="mshopiconscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MoreServices">
+            <intent-filter>
+                <action android:name="moreservices" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pmrdesclaimerscreen">
+            <intent-filter>
+                <action android:name="pmrdesclaimerscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pmrmobilenumberinputscreen">
+            <intent-filter>
+                <action android:name="pmrmobilenumberinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pmraccountlistscreen">
+            <intent-filter>
+                <action android:name="pmraccountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pmrconfirmationscreen">
+            <intent-filter>
+                <action android:name="pmrconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pmrgridscreen">
+            <intent-filter>
+                <action android:name="pmrgridscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Dthdesclaimerscreen">
+            <intent-filter>
+                <action android:name="dthdesclaimerscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Dthoperatorlistscreen">
+            <intent-filter>
+                <action android:name="dthoperatorlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Dthinputscreen">
+            <intent-filter>
+                <action android:name="dthinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Dthaccountlistscreen">
+            <intent-filter>
+                <action android:name="dthaccountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Dthconfirmationscreen">
+            <intent-filter>
+                <action android:name="dthconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Dthgridscreen">
+            <intent-filter>
+                <action android:name="dthgridscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservShowPaymentDetailScreen">
+            <intent-filter>
+                <action android:name="iservshowpaymentdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservShowPaymentMadeScreen">
+            <intent-filter>
+                <action android:name="iservshowpaymentmadescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservPaymentDetailsInput">
+            <intent-filter>
+                <action android:name="iservpaymentdetailsinput" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservVasServicesList">
+            <intent-filter>
+                <action android:name="iservvasserviceslist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservApplyNowScreen">
+            <intent-filter>
+                <action android:name="iservapplynowscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ServiceRequestTrackerScreen1">
+            <intent-filter>
+                <action android:name="servicerequesttrackerscreen1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ServiceRequestTrackerScreen2">
+            <intent-filter>
+                <action android:name="servicerequesttrackerscreen2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ServiceRequestTrackerList">
+            <intent-filter>
+                <action android:name="servicerequesttrackerlist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ServiceRequestDetail">
+            <intent-filter>
+                <action android:name="servicerequestdetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservApplyForLoanScreen">
+            <intent-filter>
+                <action android:name="iservapplyforloanscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservApplyForDematScreen">
+            <intent-filter>
+                <action android:name="iservapplyfordematscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservLocateUsScreen">
+            <intent-filter>
+                <action android:name="iservlocateusscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservRegionListScreen">
+            <intent-filter>
+                <action android:name="iservregionlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservFindATMScreen">
+            <intent-filter>
+                <action android:name="iservfindatmscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservResponseScreen">
+            <intent-filter>
+                <action android:name="iservresponsescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservFindBranchScreen">
+            <intent-filter>
+                <action android:name="iservfindbranchscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IservApplyBankScreen">
+            <intent-filter>
+                <action android:name="iservapplybankscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IserHelpListScreen">
+            <intent-filter>
+                <action android:name="iserhelplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtCitylist">
+            <intent-filter>
+                <action android:name="mtcitylist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtCitylist1">
+            <intent-filter>
+                <action android:name="mtcitylist1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtDisclaimer">
+            <intent-filter>
+                <action android:name="mtdisclaimer" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtHomeScreen">
+            <intent-filter>
+                <action android:name="mthomescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtMovielist">
+            <intent-filter>
+                <action android:name="mtmovielist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtCinemalistformovies">
+            <intent-filter>
+                <action android:name="mtcinemalistformovies" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtDatelist">
+            <intent-filter>
+                <action android:name="mtdatelist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtShowlist">
+            <intent-filter>
+                <action android:name="mtshowlist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtPricelist">
+            <intent-filter>
+                <action android:name="mtpricelist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtNooftickets">
+            <intent-filter>
+                <action android:name="mtnooftickets" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtCinemalist">
+            <intent-filter>
+                <action android:name="mtcinemalist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtMovieforcinema">
+            <intent-filter>
+                <action android:name="mtmovieforcinema" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtNoseatlayoutmsg">
+            <intent-filter>
+                <action android:name="mtnoseatlayoutmsg" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtSeatlayout">
+            <intent-filter>
+                <action android:name="mtseatlayout" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtBreakups">
+            <intent-filter>
+                <action android:name="mtbreakups" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtCardlist">
+            <intent-filter>
+                <action android:name="mtcardlist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtConfirmation">
+            <intent-filter>
+                <action android:name="mtconfirmation" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtSfascreen">
+            <intent-filter>
+                <action android:name="mtsfascreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtCvv">
+            <intent-filter>
+                <action android:name="mtcvv" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QpDisclaimer">
+            <intent-filter>
+                <action android:name="qpdisclaimer" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QpFundtransfer">
+            <intent-filter>
+                <action android:name="qpfundtransfer" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="GenMmidConfirmScreen">
+            <intent-filter>
+                <action android:name="genmmidconfirmscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QpMmidResultScreen">
+            <intent-filter>
+                <action android:name="qpmmidresultscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="RetrieveMmidConfirmationScreen">
+            <intent-filter>
+                <action android:name="retrievemmidconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QpRetrieveReceiptScreen">
+            <intent-filter>
+                <action android:name="qpretrievereceiptscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PayeeInputScreen">
+            <intent-filter>
+                <action android:name="payeeinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Confirmpaymentdetail">
+            <intent-filter>
+                <action android:name="confirmpaymentdetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QpGridInfoScreen">
+            <intent-filter>
+                <action android:name="qpgridinfoscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QpHistoryInputScreen">
+            <intent-filter>
+                <action android:name="qphistoryinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QpHistoryResponseScreen">
+            <intent-filter>
+                <action android:name="qphistoryresponsescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PmDisclaimer">
+            <intent-filter>
+                <action android:name="pmdisclaimer" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PmStore">
+            <intent-filter>
+                <action android:name="pmstore" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PmProduct">
+            <intent-filter>
+                <action android:name="pmproduct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PmProductDetails">
+            <intent-filter>
+                <action android:name="pmproductdetails" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PmContactInfo1">
+            <intent-filter>
+                <action android:name="pmcontactinfo1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PmContactInfo2">
+            <intent-filter>
+                <action android:name="pmcontactinfo2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PmConfirmation">
+            <intent-filter>
+                <action android:name="pmconfirmation" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PmAccountListScreen">
+            <intent-filter>
+                <action android:name="pmaccountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MshopPmgcaScreen">
+            <intent-filter>
+                <action android:name="mshoppmgcascreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mmtdisclaimer">
+            <intent-filter>
+                <action android:name="mmtdisclaimer" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mmtcityquery">
+            <intent-filter>
+                <action android:name="mmtcityquery" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mmtfromcities">
+            <intent-filter>
+                <action android:name="mmtfromcities" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mmttocities">
+            <intent-filter>
+                <action android:name="mmttocities" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MmtflightInfoScreen1">
+            <intent-filter>
+                <action android:name="mmtflightinfoscreen1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MmtflightInfoScreen2">
+            <intent-filter>
+                <action android:name="mmtflightinfoscreen2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Searchcriteria">
+            <intent-filter>
+                <action android:name="searchcriteria" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Departingflight">
+            <intent-filter>
+                <action android:name="departingflight" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Departingflightdetailsoneway">
+            <intent-filter>
+                <action android:name="departingflightdetailsoneway" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Passdetails1">
+            <intent-filter>
+                <action android:name="passdetails1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Passdetails2">
+            <intent-filter>
+                <action android:name="passdetails2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Passdetails3">
+            <intent-filter>
+                <action android:name="passdetails3" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Passdetails4">
+            <intent-filter>
+                <action android:name="passdetails4" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Passdetails5">
+            <intent-filter>
+                <action android:name="passdetails5" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Passdetails6">
+            <intent-filter>
+                <action android:name="passdetails6" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Passdetails7">
+            <intent-filter>
+                <action android:name="passdetails7" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Passdetails8">
+            <intent-filter>
+                <action android:name="passdetails8" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mmtcontactinfo">
+            <intent-filter>
+                <action android:name="mmtcontactinfo" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Airlineinfo">
+            <intent-filter>
+                <action android:name="airlineinfo" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Searchbydeparturetime">
+            <intent-filter>
+                <action android:name="searchbydeparturetime" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mmtcityqueryfrom">
+            <intent-filter>
+                <action android:name="mmtcityqueryfrom" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mmtcitylistfrom">
+            <intent-filter>
+                <action android:name="mmtcitylistfrom" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mmtcityqueryto">
+            <intent-filter>
+                <action android:name="mmtcityqueryto" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mmtcitylistto">
+            <intent-filter>
+                <action android:name="mmtcitylistto" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Departingflightdetailsonewayfs2">
+            <intent-filter>
+                <action android:name="departingflightdetailsonewayfs2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Departingflightdetailsroundtrip">
+            <intent-filter>
+                <action android:name="departingflightdetailsroundtrip" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Departingflightdetailsroundtripfs2">
+            <intent-filter>
+                <action android:name="departingflightdetailsroundtripfs2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Arrivingflight">
+            <intent-filter>
+                <action android:name="arrivingflight" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Arrivingflightdetails">
+            <intent-filter>
+                <action android:name="arrivingflightdetails" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Arrivingflightdetailsfs2">
+            <intent-filter>
+                <action android:name="arrivingflightdetailsfs2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mmtconfirmflight">
+            <intent-filter>
+                <action android:name="mmtconfirmflight" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MmtAccountListScreen">
+            <intent-filter>
+                <action android:name="mmtaccountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MshopmmtgcaScreen">
+            <intent-filter>
+                <action android:name="mshopmmtgcascreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Searchbyreturntime">
+            <intent-filter>
+                <action android:name="searchbyreturntime" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbpdesclaimerscreen">
+            <intent-filter>
+                <action android:name="qbpdesclaimerscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbpbillerlistscreen">
+            <intent-filter>
+                <action android:name="qbpbillerlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbponeinputscreen">
+            <intent-filter>
+                <action android:name="qbponeinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbpdateinputscreen">
+            <intent-filter>
+                <action android:name="qbpdateinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbptwoinputscreen">
+            <intent-filter>
+                <action android:name="qbptwoinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbpamountinputscreen">
+            <intent-filter>
+                <action android:name="qbpamountinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbpthreeinputscreen">
+            <intent-filter>
+                <action android:name="qbpthreeinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbpbilldetailscreen">
+            <intent-filter>
+                <action android:name="qbpbilldetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbppartialpaymentinputscreen">
+            <intent-filter>
+                <action android:name="qbppartialpaymentinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbppartialpaymentlabelscreen">
+            <intent-filter>
+                <action android:name="qbppartialpaymentlabelscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbpaccountlistscreen">
+            <intent-filter>
+                <action android:name="qbpaccountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbpconfirmationscreen">
+            <intent-filter>
+                <action android:name="qbpconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbpgridscreen">
+            <intent-filter>
+                <action android:name="qbpgridscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QbpHelpListScreen">
+            <intent-filter>
+                <action android:name="qbphelplistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pmroperatorlistscreen">
+            <intent-filter>
+                <action android:name="pmroperatorlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pmrcirclelistscreen">
+            <intent-filter>
+                <action android:name="pmrcirclelistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Recurringdeposit">
+            <intent-filter>
+                <action android:name="recurringdeposit" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Summaryscreen">
+            <intent-filter>
+                <action android:name="summaryscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Fddisclaimer">
+            <intent-filter>
+                <action android:name="fddisclaimer" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Tenureofdeposit">
+            <intent-filter>
+                <action android:name="tenureofdeposit" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Fdamount">
+            <intent-filter>
+                <action android:name="fdamount" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Fdsummaryscreen">
+            <intent-filter>
+                <action android:name="fdsummaryscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Fdreceiptscreen">
+            <intent-filter>
+                <action android:name="fdreceiptscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Rdreceiptscreen">
+            <intent-filter>
+                <action android:name="rdreceiptscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Rddisclaimerscreen">
+            <intent-filter>
+                <action android:name="rddisclaimerscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Irctcdisclaimerscreen">
+            <intent-filter>
+                <action android:name="irctcdisclaimerscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IrctcServicesList">
+            <intent-filter>
+                <action android:name="irctcserviceslist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PnrStatusInputScreen">
+            <intent-filter>
+                <action android:name="pnrstatusinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PnrStatusDetailScreen">
+            <intent-filter>
+                <action android:name="pnrstatusdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ViewDetailScreen">
+            <intent-filter>
+                <action android:name="viewdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FromToStationInputScreen">
+            <intent-filter>
+                <action android:name="fromtostationinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SelectFromToStationScreen">
+            <intent-filter>
+                <action android:name="selectfromtostationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Selectjourneyoptions">
+            <intent-filter>
+                <action android:name="selectjourneyoptions" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SelectTrainScreen">
+            <intent-filter>
+                <action android:name="selecttrainscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="SelectJourneyClass">
+            <intent-filter>
+                <action android:name="selectjourneyclass" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Availabilitystatusscreen">
+            <intent-filter>
+                <action android:name="availabilitystatusscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BookingDetailScreen">
+            <intent-filter>
+                <action android:name="bookingdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerInputScreen1">
+            <intent-filter>
+                <action android:name="passengerinputscreen1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerInputScreen2">
+            <intent-filter>
+                <action android:name="passengerinputscreen2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerInputScreen3">
+            <intent-filter>
+                <action android:name="passengerinputscreen3" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerInputScreen4">
+            <intent-filter>
+                <action android:name="passengerinputscreen4" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerInputScreen5">
+            <intent-filter>
+                <action android:name="passengerinputscreen5" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerInputScreen6">
+            <intent-filter>
+                <action android:name="passengerinputscreen6" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="AddressAndEmailInputScreen">
+            <intent-filter>
+                <action android:name="addressandemailinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ItineraryDetailScreen">
+            <intent-filter>
+                <action android:name="itinerarydetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IrctcAccountListScreen">
+            <intent-filter>
+                <action android:name="irctcaccountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BookingConfirmationScreen">
+            <intent-filter>
+                <action android:name="bookingconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="IrctcGridValueScreen">
+            <intent-filter>
+                <action android:name="irctcgridvaluescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BookingReceiptScreen">
+            <intent-filter>
+                <action android:name="bookingreceiptscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcPnrNumberInputScreen">
+            <intent-filter>
+                <action android:name="etcpnrnumberinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcPnrStatusDetailScreen">
+            <intent-filter>
+                <action android:name="etcpnrstatusdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcPassangerListScreen1">
+            <intent-filter>
+                <action android:name="etcpassangerlistscreen1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcPassangerListScreen2">
+            <intent-filter>
+                <action android:name="etcpassangerlistscreen2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcPassangerListScreen3">
+            <intent-filter>
+                <action android:name="etcpassangerlistscreen3" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcPassangerListScreen4">
+            <intent-filter>
+                <action android:name="etcpassangerlistscreen4" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcPassangerListScreen5">
+            <intent-filter>
+                <action android:name="etcpassangerlistscreen5" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcPassangerListScreen6">
+            <intent-filter>
+                <action android:name="etcpassangerlistscreen6" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BookingReceiptDetailScreen">
+            <intent-filter>
+                <action android:name="bookingreceiptdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcConfirmationScreen">
+            <intent-filter>
+                <action android:name="etcconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcGridValueScreen">
+            <intent-filter>
+                <action android:name="etcgridvaluescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcUserInputScreen">
+            <intent-filter>
+                <action android:name="etcuserinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcPnrListScreen">
+            <intent-filter>
+                <action android:name="etcpnrlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EtcReceiptScreen">
+            <intent-filter>
+                <action android:name="etcreceiptscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Btdisclaimer">
+            <intent-filter>
+                <action android:name="btdisclaimer" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="BtServiceScreen">
+            <intent-filter>
+                <action android:name="btservicescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Btcityquery">
+            <intent-filter>
+                <action android:name="btcityquery" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Btfromcities">
+            <intent-filter>
+                <action android:name="btfromcities" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Bttocities">
+            <intent-filter>
+                <action android:name="bttocities" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Btbuses">
+            <intent-filter>
+                <action android:name="btbuses" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Btbordingpointlist">
+            <intent-filter>
+                <action android:name="btbordingpointlist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Busdetailscreen">
+            <intent-filter>
+                <action android:name="busdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Btseatlayout">
+            <intent-filter>
+                <action android:name="btseatlayout" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerDetails1">
+            <intent-filter>
+                <action android:name="passengerdetails1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerDetails2">
+            <intent-filter>
+                <action android:name="passengerdetails2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerDetails3">
+            <intent-filter>
+                <action android:name="passengerdetails3" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerDetails4">
+            <intent-filter>
+                <action android:name="passengerdetails4" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerDetails5">
+            <intent-filter>
+                <action android:name="passengerdetails5" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PassengerDetails6">
+            <intent-filter>
+                <action android:name="passengerdetails6" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="UserDetails">
+            <intent-filter>
+                <action android:name="userdetails" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Btaccountlistscreen">
+            <intent-filter>
+                <action android:name="btaccountlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Confirmationscreen">
+            <intent-filter>
+                <action android:name="confirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CardNumberSFAScreen">
+            <intent-filter>
+                <action android:name="cardnumbersfascreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pnrscreen">
+            <intent-filter>
+                <action android:name="pnrscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pnrdetails">
+            <intent-filter>
+                <action android:name="pnrdetails" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ReceiptConfirmScreen">
+            <intent-filter>
+                <action android:name="receiptconfirmscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ConfirmationListScreen">
+            <intent-filter>
+                <action android:name="confirmationlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FileTDRScreen">
+            <intent-filter>
+                <action android:name="filetdrscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TdrTicketDetailScreen">
+            <intent-filter>
+                <action android:name="tdrticketdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TdrPassangerListScreen1">
+            <intent-filter>
+                <action android:name="tdrpassangerlistscreen1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TdrPassangerListScreen2">
+            <intent-filter>
+                <action android:name="tdrpassangerlistscreen2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TdrPassangerListScreen3">
+            <intent-filter>
+                <action android:name="tdrpassangerlistscreen3" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TdrPassangerListScreen4">
+            <intent-filter>
+                <action android:name="tdrpassangerlistscreen4" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TdrPassangerListScreen5">
+            <intent-filter>
+                <action android:name="tdrpassangerlistscreen5" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TdrPassangerListScreen6">
+            <intent-filter>
+                <action android:name="tdrpassangerlistscreen6" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FileTdrConfirmationScreen">
+            <intent-filter>
+                <action android:name="filetdrconfirmationscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TdrGridValueScreen">
+            <intent-filter>
+                <action android:name="tdrgridvaluescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="TdrFiledScreen">
+            <intent-filter>
+                <action android:name="tdrfiledscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EmailTicketInputScreen">
+            <intent-filter>
+                <action android:name="emailticketinputscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EmailTicketDetailScreen">
+            <intent-filter>
+                <action android:name="emailticketdetailscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EmailResponseScreen">
+            <intent-filter>
+                <action android:name="emailresponsescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="GetHistoryScreen">
+            <intent-filter>
+                <action android:name="gethistoryscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="GetHistoryPnrListScreen">
+            <intent-filter>
+                <action android:name="gethistorypnrlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="GetHistoryPnrDetail">
+            <intent-filter>
+                <action android:name="gethistorypnrdetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="GetHistoryPnrPassengerListScreen">
+            <intent-filter>
+                <action android:name="gethistorypnrpassengerlistscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ChildInputScreen1">
+            <intent-filter>
+                <action android:name="childinputscreen1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ChildInputScreen2">
+            <intent-filter>
+                <action android:name="childinputscreen2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MerchantImpsUserInput">
+            <intent-filter>
+                <action android:name="merchantimpsuserinput" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Confirmmerchantimpspaymentdetail">
+            <intent-filter>
+                <action android:name="confirmmerchantimpspaymentdetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QpMerchantGridInfoScreen">
+            <intent-filter>
+                <action android:name="qpmerchantgridinfoscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="NonWMAWAScreen">
+            <intent-filter>
+                <action android:name="nonwmawascreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ImpsUserInputToOtherBank">
+            <intent-filter>
+                <action android:name="impsuserinputtootherbank" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Confirmimpspaymentdetail">
+            <intent-filter>
+                <action android:name="confirmimpspaymentdetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="QpIfscGridInfoScreen">
+            <intent-filter>
+                <action android:name="qpifscgridinfoscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrdisclaimer">
+            <intent-filter>
+                <action android:name="mtpvrdisclaimer" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrcitylist">
+            <intent-filter>
+                <action android:name="mtpvrcitylist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtpvrhomeScreen">
+            <intent-filter>
+                <action android:name="mtpvrhomescreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrcitylist1">
+            <intent-filter>
+                <action android:name="mtpvrcitylist1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrmovielist">
+            <intent-filter>
+                <action android:name="mtpvrmovielist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrcinemalistformovies">
+            <intent-filter>
+                <action android:name="mtpvrcinemalistformovies" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrdatelist">
+            <intent-filter>
+                <action android:name="mtpvrdatelist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrshowlist">
+            <intent-filter>
+                <action android:name="mtpvrshowlist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrpricelist">
+            <intent-filter>
+                <action android:name="mtpvrpricelist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrnooftickets">
+            <intent-filter>
+                <action android:name="mtpvrnooftickets" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrseatlayout">
+            <intent-filter>
+                <action android:name="mtpvrseatlayout" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrnoseatlayoutmsg">
+            <intent-filter>
+                <action android:name="mtpvrnoseatlayoutmsg" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrbreakups">
+            <intent-filter>
+                <action android:name="mtpvrbreakups" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrcardlist">
+            <intent-filter>
+                <action android:name="mtpvrcardlist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrconfirmation">
+            <intent-filter>
+                <action android:name="mtpvrconfirmation" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrsfascreen">
+            <intent-filter>
+                <action android:name="mtpvrsfascreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrcinemalist">
+            <intent-filter>
+                <action android:name="mtpvrcinemalist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrmovieforcinema">
+            <intent-filter>
+                <action android:name="mtpvrmovieforcinema" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrcardlistcredit">
+            <intent-filter>
+                <action android:name="mtpvrcardlistcredit" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Mtpvrconfirmationcredit">
+            <intent-filter>
+                <action android:name="mtpvrconfirmationcredit" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtCardlistcredit">
+            <intent-filter>
+                <action android:name="mtcardlistcredit" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MtConfirmationcredit">
+            <intent-filter>
+                <action android:name="mtconfirmationcredit" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MmtAccountListCreditScreen">
+            <intent-filter>
+                <action android:name="mmtaccountlistcreditscreen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Confirmationscreencredit">
+            <intent-filter>
+                <action android:name="confirmationscreencredit" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Pmrconfirmationscreencredit">
+            <intent-filter>
+                <action android:name="pmrconfirmationscreencredit" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Dthconfirmationscreencredit">
+            <intent-filter>
+                <action android:name="dthconfirmationscreencredit" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Qbpconfirmationscreencredit">
+            <intent-filter>
+                <action android:name="qbpconfirmationscreencredit" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="CurrentFiveTransaction">
+            <intent-filter>
+                <action android:name="currentfivetransaction" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="LastFiveTransaction">
+            <intent-filter>
+                <action android:name="lastfivetransaction" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

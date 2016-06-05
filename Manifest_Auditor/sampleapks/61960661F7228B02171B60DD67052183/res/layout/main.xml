@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/lighter_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_footer_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="12.0dip" android:textColor="@color/darker_gray" android:gravity="center" android:id="@id/footer_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/rules_menu" />
+        <LinearLayout android:orientation="horizontal" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12.0dip" android:textColor="@color/darker_gray" android:gravity="center" android:id="@id/agreement_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/rules_text" android:layout_weight="1.0" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/darker_gray" android:gravity="center" android:id="@id/exit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/exit" android:layout_weight="2.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/btn_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <Button android:enabled="false" android:layout_gravity="center" android:id="@id/yes_btn" android:background="@drawable/green_button_background" android:visibility="invisible" android:layout_width="180.0dip" android:layout_height="60.0dip" android:text="@string/i_accept" />
+        </LinearLayout>
+        <ScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="outsideInset" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/btn_layout" android:isScrollContainer="true">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0dip" android:textColor="@color/black" android:gravity="center" android:id="@id/main_text" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/p_bar" android:layout_width="250.0dip" android:layout_height="45.0dip" android:layout_marginTop="10.0dip" style="@android:style/Widget.ProgressBar.Horizontal" />
+                <TextView android:textSize="17.0dip" android:textStyle="bold" android:textColor="@color/black" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/installed_content_text" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

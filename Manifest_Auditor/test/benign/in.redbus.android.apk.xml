@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="20000" android:versionName="2.0.0" android:installLocation="auto" package="in.redbus.android"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <permission android:name="in.redbus.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="in.redbus.android.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" android:required="false" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" android:required="false" />
+    <uses-feature android:glEsVersion="0x20000" android:required="true" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <permission android:name="in.redbus.android.gpstracker.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
+    <uses-permission android:name="in.redbus.android.gpstracker.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:required="false" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:required="false" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <application android:theme="@style/Theme.appTheme" android:label="@string/app_name" android:icon="@drawable/appicon" android:name="in.redbus.android.App" android:logo="@drawable/redbus_logo">
+        <activity android:theme="@style/SplashTheme" android:label="@string/app_name" android:name="in.redbus.android.activity.SplashScreen" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_home_screen" android:name="in.redbus.android.activity.HomeScreen" android:launchMode="singleTop" android:screenOrientation="portrait" class=".activity.HomeScreen" />
+        <activity android:label="@string/title_activity_city_select_screen" android:name="in.redbus.android.activity.CitySelectScreen" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.HomeScreen" class=".activity.CitySelectScreen" />
+        <activity android:theme="@style/Theme.appTheme.Dark" android:label="@string/title_activity_city_select_screen" android:name="in.redbus.android.activity.FilterActivity" android:screenOrientation="portrait" class=".activity.FilterActivity" />
+        <activity android:label="@string/title_activity_city_select_screen" android:name="in.redbus.android.activity.CalendarScreen" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.HomeScreen" class=".activity.CalendarScreen" />
+        <activity android:label="@string/title_activity_notification_screen" android:name="in.redbus.android.activity.TermsAndConditionsActivity" android:screenOrientation="portrait" class=".activity.TermsAndConditionsActivity" />
+        <activity android:label="@string/title_activity_notification_screen" android:name="in.redbus.android.activity.NotificationsScreen" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.HomeScreen" class=".activity.NotificationsScreen" />
+        <activity android:label="@string/title_activity_show_buses_screen" android:name="in.redbus.android.activity.SearchBuses" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.HomeScreen" class=".activity.SearchBuses" />
+        <activity android:theme="@style/Theme.appTheme.Dark" android:label="@string/title_activity_bank_selection" android:name="in.redbus.android.activity.BankSelectionActivity" android:screenOrientation="portrait" class=".activity.BankSelectionActivity" />
+        <activity android:label="@string/title_activity_show_buses_screen" android:name="in.redbus.android.activity.BusDetailsScreen" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.SearchBuses" class=".activity.BusDetailsScreen" />
+        <activity android:theme="@style/Theme.appTheme.Dark" android:label="@string/title_activity_show_buses_screen" android:name="in.redbus.android.activity.FilterDataActivity" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.FilterActivity" class=".activity.FilterDataActivity" />
+        <activity android:label="@string/title_activity_seat_selection_screen" android:name="in.redbus.android.activity.SeatSelectionScreen" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.BusDetailsScreen" class=".activity.SeatSelectionScreen" />
+        <activity android:name="in.redbus.android.activity.LastMinuteTicketDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.BusDetailsScreen" class=".activity.SeatSelectionScreen" />
+        <activity android:label="@string/title_activity_net_banking_screen" android:name="in.redbus.android.activity.NetBankingActivity" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.PaymentOptionsScreen" class=".activity.NetBankingActivity" />
+        <activity android:name="in.redbus.android.activity.CustomerInfoScreen" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" android:parentActivityName="in.redbus.android.activity.BusDetailsScreen" />
+        <activity android:name="in.redbus.android.activity.TravellerDetailsScreen" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" android:parentActivityName="in.redbus.android.activity.CustomerInfoScreen" class=".activity.TravellerDetailsScreen" />
+        <activity android:name="in.redbus.android.activity.PaymentOptionsScreen" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" android:parentActivityName="in.redbus.android.activity.CustomerInfoScreen" class=".activity.PaymentOptionsScreen" />
+        <activity android:name="in.redbus.android.activity.CreditCardScreen" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" android:parentActivityName="in.redbus.android.activity.PaymentOptionsScreen" class=".activity.CreditCardScreen" />
+        <activity android:name="in.redbus.android.activity.DebitCardScreen" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" android:parentActivityName="in.redbus.android.activity.PaymentOptionsScreen" class=".activity.DebitCardScreen" />
+        <activity android:name="in.redbus.android.activity.CashOnDeliveryScreen" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.PaymentOptionsScreen" class=".activity.CashOnDeliveryScreen" />
+        <activity android:name="in.redbus.android.activity.PaymentWebViewActivity" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.CreditCardScreen" class=".activity.PaymentWebViewActivity" />
+        <activity android:name="in.redbus.android.activity.BookingConfirmationScreen" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.HomeScreen" class=".activity.BookingConfirmationScreen" />
+        <activity android:name="in.redbus.android.activity.BookingErrorScreen" android:screenOrientation="portrait" class=".activity.BookingErrorScreen" />
+        <activity android:name="in.redbus.android.activity.FeedbackScreen" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize" class=".activity.FeedbackScreen" />
+        <activity android:name="in.redbus.android.activity.FeedbackSuccessScreen" android:screenOrientation="portrait" class=".activity.FeedbackSuccessScreen" />
+        <activity android:name="in.redbus.android.activity.CodConfirmationScreen" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.PaymentOptionsScreen" class=".activity.CodConfirmationScreen" />
+        <activity android:name="in.redbus.android.activity.BookingHistoryScreen" android:launchMode="singleTop" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.HomeScreen" class=".activity.BookingHistoryScreen" />
+        <activity android:name="in.redbus.android.activity.TicketDetailsScreen" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.DashBoardScreen" class=".activity.TicketDetailsScreen" />
+        <activity android:name="in.redbus.android.activity.CashOnDeliverDetailsScreen" android:screenOrientation="portrait" class=".activity.CashOnDeliverDetailsScreen" />
+        <activity android:label="@string/about_us" android:name="in.redbus.android.activity.AboutUsScreen" android:screenOrientation="portrait" class=".activity.AboutUsScreen" />
+        <activity android:label="@string/app_name" android:name="in.redbus.android.activity.BusLocationMapActivity" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.redbus.android.activity.DashBoardScreen" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.BookingHistoryScreen" />
+        <activity android:label="@string/app_name" android:name="in.redbus.android.activity.CancellationScreen" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.DashBoardScreen" />
+        <activity android:label="@string/app_name" android:name="in.redbus.android.activity.SyncDesktopBookingsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing" />
+        <activity android:label="@string/app_name" android:name="in.redbus.android.activity.SyncZipdialAuthenticationActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:label="@string/app_name" android:name="in.redbus.android.activity.VerificationScreen" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing" />
+        <activity android:label="@string/app_name" android:name="in.redbus.android.activity.DownloadBookingsActivity" android:screenOrientation="portrait" />
+        <activity android:name="in.redbus.android.activity.FastPayActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <meta-data android:name="LOCALYTICS_APP_KEY" android:value="02dbbf110e5dc43d2a61c47-ec69fb52-2f17-11e3-9057-005cf8cbabd8" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCbG0K1NMvlZP_IJtWCicgV9e6CA4woemM" />
+        <receiver android:name="in.redbus.android.receiver.RedbusBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.localytics.android.ReferralReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.flurry.android.InstallReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="in.redbus.android.receiver.InstallReferrerReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="in.redbus.android.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="in.redbus.android" />
+            </intent-filter>
+        </receiver>
+        <service android:name="in.redbus.android.GCMIntentService" />
+        <activity android:label="@string/title_activity_settings" android:name="in.redbus.android.activity.SettingsActivity" android:screenOrientation="portrait" android:parentActivityName="in.redbus.android.activity.HomeScreen">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="in.redbus.android.activity.HomeScreen" />
+        </activity>
+        <activity android:name="in.redbus.android.activity.ManageSavedCards" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:name="in.redbus.android.activity.GPlusSsoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:name="in.redbus.android.activity.FbSsoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity android:theme="@style/Theme.appTheme.Dark" android:name="in.redbus.android.activity.HdCityAreaSelectionActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:theme="@style/Theme.appTheme.Dark" android:label="@string/title_activity_location_selection" android:name="in.redbus.android.activity.LocationSelectionActivity" android:parentActivityName="in.redbus.android.activity.BusDetailsScreen">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="in.redbus.android.activity.BusDetailsScreen" />
+        </activity>
+    </application>
+</manifest>

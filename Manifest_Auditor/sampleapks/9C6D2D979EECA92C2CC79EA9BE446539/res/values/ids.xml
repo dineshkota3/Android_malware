@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="act_thank">false</item>
+    <item type="id" name="button_d_f">false</item>
+    <item type="id" name="main_footer_layout">false</item>
+    <item type="id" name="footer_text">false</item>
+    <item type="id" name="agreement_text">false</item>
+    <item type="id" name="exit_text">false</item>
+    <item type="id" name="btn_layout">false</item>
+    <item type="id" name="yes_btn">false</item>
+    <item type="id" name="main_text">false</item>
+    <item type="id" name="p_bar">false</item>
+    <item type="id" name="installed_content_text">false</item>
+    <item type="id" name="off_text">false</item>
+    <item type="id" name="back_button_off">false</item>
+    <item type="id" name="yes_button_off">false</item>
+    <item type="id" name="read_off_item">false</item>
+</resources>
